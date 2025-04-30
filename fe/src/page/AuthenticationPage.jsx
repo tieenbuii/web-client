@@ -17,7 +17,7 @@ const AuthenticationPage = ({ children, className = "" }) => {
       </Link>
       <div className="text-center">
         <div className="text-xl md:text-4xl font-bold text-[#1DC071]">
-          Welcome to HC.VN
+          Welcome to Pine Perfume
         </div>
       </div>
       {children}

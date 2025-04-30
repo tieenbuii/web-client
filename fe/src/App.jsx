@@ -38,7 +38,7 @@ function App() {
           "client-id": key.ClientId,
         }}
       >
-        <Header />
+        {/* <Header /> */}
         <Navbar />
         <PaymentList />
         <Routes>

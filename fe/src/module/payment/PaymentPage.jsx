@@ -211,7 +211,7 @@ const PaymentPage = () => {
             </div>
 
             <div className="information-order">
-              <div className="flex flex-col bg-white rounded-lg pb-10 md:h-[560px] overflow-hidden overflow-y-auto p-5 bg-[#e5e7eb]">
+              <div className="flex flex-col bg-white rounded-lg pb-10 md:h-[560px] overflow-hidden overflow-y-auto p-5">
                 <div className="flex items-center justify-between p-5">
                   <span className="text-xl font-bold inline-block">
                     Thông tin đơn hàng

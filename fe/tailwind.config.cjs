@@ -7,7 +7,7 @@ module.exports = {
         body: ["Roboto", "sans-serif"],
       },
       colors: {
-        primary: "#1846be",
+        primary: "#d72229",
       },
       width: {
         'custom': 'calc(80% + 50px)',

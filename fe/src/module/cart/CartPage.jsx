@@ -18,7 +18,7 @@ const CartPage = () => {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
-    documentTitle: "HC.VN chuyên bán cung cấp máy tính xách tay",
+    documentTitle: "Pine Perfume chuyên bán cung cấp máy tính xách tay",
     onAfterPrint: () => {
       toast.dismiss();
       toast.success("In thành công báo giá sản phẩm", { pauseOnHover: false });

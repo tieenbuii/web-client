@@ -127,13 +127,13 @@ const Sidebar = () => {
             className="w-full object-cover"
           />
         </div>
-        <span className="font-semibold text-xl">HC.VN</span>
+        <span className="font-semibold text-xl">Pine Perfume</span>
       </div>
-      <div className="flex items-center justify-end px-[20px]">
+      {/* <div className="flex items-center justify-end px-[20px]">
         <div className="font-semibold text-xl relative">
           {formatPrice(current?.balance ?? 0)}
         </div>
-      </div>
+      </div> */}
       {sidebarLinks.map((link) => {
         if (link.onClick) {
           return (

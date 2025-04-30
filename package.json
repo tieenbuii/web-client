@@ -1,7 +1,7 @@
 {
-  "name": "HC-Tech",
+  "name": "Pine-Perfume",
   "version": "1.0.0",
-  "description": "For TLCN 2022",
+  "description": "Website for perfume",
   "main": "index.js",
   "scripts": {
     "build": "cd be && npm install  && cd ../fe && npm install && npm run build",
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nvh2312/hc-laptop"
+    "url": "https://github.com/tieenbuii/web-client.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nvh2312/hc-laptop"
+    "url": "https://github.com/tieenbuii/web-client.git"
   },
-  "homepage": "https://github.com/nvh2312/hc-laptop"
+  "homepage": "https://github.com/tieenbuii/web-client.git"
 }

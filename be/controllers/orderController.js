@@ -51,7 +51,7 @@ exports.createOrder = catchAsync(async (req, res, next) => {
     const message = mailTemplate(doc, domain);
     await sendEmail({
       email: req.user.email,
-      subject: "Đơn mua hàng tại HC.VN",
+      subject: "Đơn mua hàng tại Pine Perfume",
       message,
     });
   } catch (err) {

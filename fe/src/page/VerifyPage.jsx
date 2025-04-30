@@ -47,7 +47,9 @@ const VerifyPage = () => {
       return navigate("/sign-up");
     } else if (JSON.parse(localStorage.getItem("user")).active === "active") {
       toast.dismiss();
-      toast.success("Chào mừng bạn đến với HC.VN", { pauseOnHover: false });
+      toast.success("Chào mừng bạn đến với Pine Perfume", {
+        pauseOnHover: false,
+      });
       return navigate("/");
     }
   }, []);
@@ -65,7 +67,9 @@ const VerifyPage = () => {
       const resultAction = await dispatch(action);
       const user = unwrapResult(resultAction);
       toast.dismiss();
-      toast.success("Chào mừng bạn đến với HC.VN", { pauseOnHover: false });
+      toast.success("Chào mừng bạn đến với Pine Perfume", {
+        pauseOnHover: false,
+      });
       navigate("/");
       reset({
         verify: "",
@@ -147,7 +151,10 @@ const VerifyPage = () => {
         >
           Xác nhận
         </Button>
-        <div onClick={handleLogout} className="bg-white hover:bg-gray-100 absolute w-10 h-10 -top-40 left-5 rounded-full shadow-md cursor-pointer">
+        <div
+          onClick={handleLogout}
+          className="bg-white hover:bg-gray-100 absolute w-10 h-10 -top-40 left-5 rounded-full shadow-md cursor-pointer"
+        >
           <svg
             viewBox="0 0 24 24"
             fill="none"

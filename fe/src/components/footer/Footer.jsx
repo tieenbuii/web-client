@@ -101,7 +101,7 @@ const Footer = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="text-2xl font-bold">HC.VN</span>
+          <span className="text-2xl font-bold">Pine Perfume</span>
         </div>
       </div>
     </footer>

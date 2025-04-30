@@ -138,7 +138,7 @@ const Navbar = () => {
               className="text-white font-medium text-2xl hidden xl:inline-block"
               title="Trang chủ"
             >
-              PINEPERFUME
+              PINE
             </span>
           </Link>
         </div>
@@ -151,7 +151,7 @@ const Navbar = () => {
             type="text"
             className="py-1 md:py-3 px-4 rounded-l-lg text-base w-[80%] sm:w-[85%] xl:w-[600px] flex-shrink xl:flex-shrink-0 text-black"
             id="search"
-            placeholder="Nhập tên laptop cần tìm ..."
+            placeholder="Nhập tên nước hoa ..."
             onClick={handleClick}
             onChange={handleChange}
             value={keyword}
