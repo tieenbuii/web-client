@@ -49,7 +49,7 @@ const sidebarLinks = [
     ),
   },
   {
-    title: "Quản lý đơn hàng",
+    title: "Đơn hàng của bạn",
     url: "/account/orders",
     icon: (
       <svg
@@ -69,7 +69,7 @@ const sidebarLinks = [
     ),
   },
   {
-    title: "Sổ địa chỉ",
+    title: "Địa chỉ giao hàng",
     url: "/account/address",
     icon: (
       <svg
@@ -119,21 +119,6 @@ const Sidebar = () => {
   useSocket();
   return (
     <SidebarStyles className="sidebar">
-      <div className="flex items-center justify-start">
-        <div className="w-[100px]">
-          <img
-            srcSet="/images/logo.png"
-            alt=""
-            className="w-full object-cover"
-          />
-        </div>
-        <span className="font-semibold text-xl">Pine Perfume</span>
-      </div>
-      {/* <div className="flex items-center justify-end px-[20px]">
-        <div className="font-semibold text-xl relative">
-          {formatPrice(current?.balance ?? 0)}
-        </div>
-      </div> */}
       {sidebarLinks.map((link) => {
         if (link.onClick) {
           return (

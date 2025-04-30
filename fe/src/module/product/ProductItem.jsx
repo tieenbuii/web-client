@@ -33,7 +33,7 @@ const ProductItem = ({
         className="w-full h-[180px] object-cover rounded-lg mb-2 transition-transform group-hover:scale-105"
       />
       <div className="flex flex-col flex-1">
-        <h3 className="line-clamp-2 mb-2 text-sm font-medium">
+        <h3 className="line-clamp-1 mb-2 text-sm font-medium">
           {product?.title}
         </h3>
         {product?.inventory >= 5 && (
@@ -73,7 +73,7 @@ const ProductItem = ({
         </div>
         <div></div>
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <span className="hidden sm:block text-sm line-through text-slate-400">
               {formatPrice(product?.price)}
             </span>
@@ -82,6 +82,30 @@ const ProductItem = ({
               {product?.price / 1000000 + " tr "}
             </span>
             <span className="text-blue text-sm"> - {product?.percent}%</span>
+          </div> */}
+          <div className="flex items-center">
+            {product?.promotion !== product?.price ? (
+              <>
+                <span className="hidden sm:block text-sm line-through text-slate-400">
+                  {formatPrice(product?.price)}
+                </span>
+
+                <span className="sm:hidden text-sm line-through text-slate-400">
+                  {product?.price / 1000000 + " tr "}
+                </span>
+
+                <span className="text-blue text-sm">
+                  {" "}
+                  - {product?.percent}%
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="hidden sm:block text-sm invisible">--</span>
+                <span className="sm:hidden text-sm invisible">--</span>
+                <span className="text-sm invisible">--</span>
+              </>
+            )}
           </div>
           {/* {selected && selected.includes(product) ? (
             <button
@@ -99,11 +123,11 @@ const ProductItem = ({
             </button>
           )} */}
           <Link
-              className="sm:p-2 text-green-600 border border-solid border-green-600 rounded-lg text-sm font-medium transition-all"
-              to={`/product/${product?.id}`}
-            >
-              Xem chi tiết
-            </Link>
+            className="sm:p-2 text-green-600 border border-solid border-green-600 rounded-lg text-sm font-medium transition-all"
+            to={`/product/${product?.id}`}
+          >
+            Xem chi tiết
+          </Link>
         </div>
       </div>
     </div>

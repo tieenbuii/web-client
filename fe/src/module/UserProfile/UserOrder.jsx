@@ -169,7 +169,7 @@ const UserOrder = () => {
       {status === action_status.LOADING && (
         <>
           {" "}
-          <div className="w-[90vw] overflow-x-auto">
+          <div className="max-w-[100vw] overflow-x-auto">
             <Table>
               <thead>
                 <tr>
@@ -268,7 +268,7 @@ const UserOrder = () => {
           {order?.length > 0 && (
             <>
               {" "}
-              <div className="w-[90vw] overflow-x-auto">
+              <div className="max-w-[100vw] overflow-x-auto">
                 <Table>
                   <thead>
                     <tr>
