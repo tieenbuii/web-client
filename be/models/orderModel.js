@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const Transaction = require("./transactionModel");
 const User = require("./userModel");
-const io = require("../socket");
-
 
 const orderSchema = new mongoose.Schema(
   {
@@ -48,7 +46,7 @@ const orderSchema = new mongoose.Schema(
         values: [
           "Cancelled",
           "Processed",
-          "Waiting Goods",
+          "WaitingGoods",
           "Delivery",
           "Success",
         ],
@@ -68,7 +66,7 @@ orderSchema.index({ "$**": "text" });
 orderSchema.pre(/^find/, function (next) {
   this.populate({
     path: "user",
-    select: "name",
+    select: "name email",
   });
 
   next();
@@ -76,9 +74,6 @@ orderSchema.pre(/^find/, function (next) {
 
 orderSchema.statics.updateUserBalance = async function (userId, balance) {
   await User.findByIdAndUpdate(userId, { $inc: { balance: balance } });
-  io.getIO().emit("purchase", {
-    user: userId._id,
-  });
 };
 orderSchema.post("save", function () {
   if (this.payments === "số dư")
@@ -86,20 +81,13 @@ orderSchema.post("save", function () {
 });
 
 orderSchema.post("findOneAndUpdate", async function (doc) {
-  if (doc.payments !== "tiền mặt" && doc.status === "Cancelled"){
+  if (doc.payments !== "tiền mặt" && doc.status === "Cancelled")
     await Transaction.create({
       user: doc.user._id.toString(),
       amount: doc.totalPrice,
       payments: "refund",
       order: doc.id,
     });
-    io.getIO().emit("recharge", {
-      action: "refund",
-      user: doc.user._id.toString(),
-      amount: doc.totalPrice,
-      order: doc.id,
-    });
-  }
 });
 
 const Order = mongoose.model("Order", orderSchema);
