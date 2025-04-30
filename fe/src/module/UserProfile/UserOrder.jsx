@@ -62,10 +62,10 @@ const UserOrder = () => {
   return (
     <div>
       <div className="flex items-center justify-between  flex-col xl:flex-row">
-        <DashboardHeading
+        {/* <DashboardHeading
           title="Quản lý đơn hàng"
           className="xl:px-5 xl:py-5"
-        ></DashboardHeading>
+        ></DashboardHeading> */}
         {/* <div className="flex items-center gap-x-3 pb-5">
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
@@ -169,7 +169,7 @@ const UserOrder = () => {
       {status === action_status.LOADING && (
         <>
           {" "}
-          <div className="max-w-[90vw] overflow-x-auto">
+          <div className="max-w-[100vw] overflow-x-auto">
             <Table>
               <thead>
                 <tr>
@@ -268,7 +268,7 @@ const UserOrder = () => {
           {order?.length > 0 && (
             <>
               {" "}
-              <div className="max-w-[90vw] overflow-x-auto">
+              <div className="max-w-[100vw] overflow-x-auto">
                 <Table>
                   <thead>
                     <tr>
