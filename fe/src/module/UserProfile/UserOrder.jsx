@@ -46,9 +46,7 @@ const UserOrder = () => {
       dispatch(getOrder(data));
       dispatch(refresh());
       setState(params.status);
-    } catch (error) {
-     
-    }
+    } catch (error) {}
   }, [page, state, params.status, update]);
 
   const handleClick = (e) => {
@@ -68,7 +66,7 @@ const UserOrder = () => {
           title="Quản lý đơn hàng"
           className="xl:px-5 xl:py-5"
         ></DashboardHeading>
-        <div className="flex items-center gap-x-3 pb-5">
+        {/* <div className="flex items-center gap-x-3 pb-5">
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
               state === "All" || state === undefined
@@ -106,6 +104,64 @@ const UserOrder = () => {
             onClick={handleClick}
           >
             Đã hủy đơn
+          </button>
+        </div> */}
+        <div className="flex items-center gap-x-3 mt-5 mb-5">
+          <button
+            className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
+              state === "All" || state === undefined
+                ? "bg-primary text-white"
+                : ""
+            }`}
+            value="All"
+            onClick={handleClick}
+          >
+            Tất cả đơn hàng
+          </button>
+          <button
+            className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
+              state === "Processed" ? "bg-primary text-white" : ""
+            }`}
+            value="Processed"
+            onClick={handleClick}
+          >
+            Chờ xác nhận
+          </button>
+          <button
+            className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
+              state === "WaitingGoods" ? "bg-primary text-white" : ""
+            }`}
+            value="WaitingGoods"
+            onClick={handleClick}
+          >
+            Đợi lấy hàng
+          </button>
+          <button
+            className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
+              state === "Delivery" ? "bg-primary text-white" : ""
+            }`}
+            value="Delivery"
+            onClick={handleClick}
+          >
+            Đang vận chuyển
+          </button>
+          <button
+            className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
+              state === "Success" ? "bg-primary text-white" : ""
+            }`}
+            value="Success"
+            onClick={handleClick}
+          >
+            Đã giao hàng
+          </button>
+          <button
+            className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300  ${
+              state === "Cancelled" ? "bg-primary text-white" : ""
+            }`}
+            value="Cancelled"
+            onClick={handleClick}
+          >
+            Đã hủy
           </button>
         </div>
       </div>
