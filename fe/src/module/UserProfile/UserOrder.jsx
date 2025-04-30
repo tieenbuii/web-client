@@ -169,7 +169,7 @@ const UserOrder = () => {
       {status === action_status.LOADING && (
         <>
           {" "}
-          <div className="max-w-[100vw] overflow-x-auto">
+          <div className="w-[90vw] overflow-x-auto">
             <Table>
               <thead>
                 <tr>
@@ -268,7 +268,7 @@ const UserOrder = () => {
           {order?.length > 0 && (
             <>
               {" "}
-              <div className="max-w-[100vw] overflow-x-auto">
+              <div className="w-[90vw] overflow-x-auto">
                 <Table>
                   <thead>
                     <tr>
@@ -361,10 +361,13 @@ const UserOrder = () => {
                                 {item._id.slice(0, 10)}
                               </td>
                               <td>
-                              {format(new Date(item?.createdAt), "HH:mm")}
-                              &nbsp;&nbsp;
-                              {format(new Date(item?.createdAt), "dd/MM/yyyy")}
-                            </td>
+                                {format(new Date(item?.createdAt), "HH:mm")}
+                                &nbsp;&nbsp;
+                                {format(
+                                  new Date(item?.createdAt),
+                                  "dd/MM/yyyy"
+                                )}
+                              </td>
                               <td>{item.cart[0].product.title.slice(0, 50)}</td>
                               <td>{formatPrice(item.totalPrice)}</td>
                               <td>
@@ -391,10 +394,13 @@ const UserOrder = () => {
                                 {item._id.slice(0, 10)}
                               </td>
                               <td>
-                              {format(new Date(item?.createdAt), "HH:mm")}
-                              &nbsp;&nbsp;
-                              {format(new Date(item?.createdAt), "dd/MM/yyyy")}
-                            </td>
+                                {format(new Date(item?.createdAt), "HH:mm")}
+                                &nbsp;&nbsp;
+                                {format(
+                                  new Date(item?.createdAt),
+                                  "dd/MM/yyyy"
+                                )}
+                              </td>
                               <td>{item.cart[0].product.title.slice(0, 50)}</td>
                               <td>{formatPrice(item.totalPrice)}</td>
                               <td>
@@ -421,10 +427,13 @@ const UserOrder = () => {
                                 {item._id.slice(0, 10)}
                               </td>
                               <td>
-                              {format(new Date(item?.createdAt), "HH:mm")}
-                              &nbsp;&nbsp;
-                              {format(new Date(item?.createdAt), "dd/MM/yyyy")}
-                            </td>
+                                {format(new Date(item?.createdAt), "HH:mm")}
+                                &nbsp;&nbsp;
+                                {format(
+                                  new Date(item?.createdAt),
+                                  "dd/MM/yyyy"
+                                )}
+                              </td>
                               <td>{item.cart[0].product.title.slice(0, 50)}</td>
                               <td>{formatPrice(item.totalPrice)}</td>
                               <td>
@@ -451,10 +460,13 @@ const UserOrder = () => {
                                 {item._id.slice(0, 10)}
                               </td>
                               <td>
-                              {format(new Date(item?.createdAt), "HH:mm")}
-                              &nbsp;&nbsp;
-                              {format(new Date(item?.createdAt), "dd/MM/yyyy")}
-                            </td>
+                                {format(new Date(item?.createdAt), "HH:mm")}
+                                &nbsp;&nbsp;
+                                {format(
+                                  new Date(item?.createdAt),
+                                  "dd/MM/yyyy"
+                                )}
+                              </td>
                               <td>{item.cart[0].product.title.slice(0, 50)}</td>
                               <td>{formatPrice(item.totalPrice)}</td>
 
@@ -482,10 +494,13 @@ const UserOrder = () => {
                                 {item._id.slice(0, 10)}
                               </td>
                               <td>
-                              {format(new Date(item?.createdAt), "HH:mm")}
-                              &nbsp;&nbsp;
-                              {format(new Date(item?.createdAt), "dd/MM/yyyy")}
-                            </td>
+                                {format(new Date(item?.createdAt), "HH:mm")}
+                                &nbsp;&nbsp;
+                                {format(
+                                  new Date(item?.createdAt),
+                                  "dd/MM/yyyy"
+                                )}
+                              </td>
                               <td>{item.cart[0].product.title.slice(0, 50)}</td>
                               <td>{formatPrice(item.totalPrice)}</td>
 
