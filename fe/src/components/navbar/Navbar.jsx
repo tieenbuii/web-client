@@ -117,7 +117,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div
+        {/* <div
           className="max-w-full w-[100%] md:w-[530px] xl:w-[600px] flex items-center relative"
           ref={nodeRef}
         >
@@ -130,7 +130,7 @@ const Navbar = () => {
             onChange={handleChange}
             value={keyword}
           />
-          {/* <div
+          <div
             className="w-[50px] bg-primary h-[32px] md:h-[35px] lg:h-[48px] rounded-r-lg flex items-center justify-center cursor-pointer"
             onClick={handleClickSearch}
           >
@@ -148,8 +148,12 @@ const Navbar = () => {
                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
               />
             </svg>
-          </div> */}
-           <div
+          </div>
+          {keyword && show === true && (
+            <Search onClickItem={handleClose} keyword={search} />
+          )}
+        </div> */}
+ <div
           className="w-[250px] md:w-[420px] lg:w-[650px] flex items-center relative border rounded-lg"
           ref={nodeRef}
         >
@@ -185,11 +189,6 @@ const Navbar = () => {
             <Search onClickItem={handleClose} keyword={search} />
           )}
         </div>
-          {keyword && show === true && (
-            <Search onClickItem={handleClose} keyword={search} />
-          )}
-        </div>
-
         {!isLoggedIn ? (
           <Link
             to="/sign-in"
