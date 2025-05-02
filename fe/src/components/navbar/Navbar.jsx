@@ -180,7 +180,7 @@ const Navbar = () => {
             value={keyword}
           />
           <div
-            className="w-[50px] bg-primary h-[32px] md:h-[48px] border-[1px] border-primary rounded-r-lg flex items-center justify-center cursor-pointer"
+            className="w-[50px] bg-primary h-[32px] md:h-[50px] border-[1px] border-primary rounded-r-lg flex items-center justify-center cursor-pointer"
             onClick={handleClickSearch}
           >
             <svg
