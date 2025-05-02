@@ -37,16 +37,16 @@ const ProductItem = ({
           {product?.title}
         </h3>
         {product?.inventory >= 5 && (
-          <span className="sm:hidden h-2 tertiary font-medium mb-2 text-sm"></span>
+          <span className="sm:hidden h-2 text-tertiary font-medium mb-2 text-sm"></span>
         )}
         {product?.inventory < 5 && product?.inventory > 0 && (
-          <span className="sm:h-auto h-10 tertiary font-medium mb-2 text-sm">
+          <span className="sm:h-auto h-10 text-tertiary font-medium mb-2 text-sm">
             Chỉ còn {product?.inventory} sản phẩm
           </span>
         )}
         {product?.inventory === 0 && (
-          <span className="tertiary font-medium mb-2 text-sm">
-            Sản phẩm hiện tại hết hàng
+          <span className="text-tertiary font-medium mb-2 text-sm">
+            Sản phẩm hết hàng
           </span>
         )}
         {product?.inventory >= 5 && <span className="mb-8"></span>}
@@ -94,7 +94,7 @@ const ProductItem = ({
                   {product?.price / 1000000 + " tr "}
                 </span>
 
-                <span className="text-blue text-sm">
+                <span className="text-blue text-sm mr-3">
                   {" "}
                   - {product?.percent}%
                 </span>
@@ -116,14 +116,14 @@ const ProductItem = ({
             </button>
           ) : (
             <button
-              className="sm:p-2 text-green-600 border border-solid border-green-600 rounded-lg text-sm font-medium transition-all"
+              className="sm:p-2 text-secondary border border-solid border-green-600 rounded-lg text-sm font-medium transition-all"
               onClick={(e) => handleAdd(e, product)}
             >
               So sánh
             </button>
           )} */}
           <Link
-            className="sm:p-2 text-green-600 border border-solid border-green-600 rounded-lg text-sm font-medium transition-all"
+            className="sm:p-2 text-secondary border border-solid border-green-600 rounded-lg text-sm font-medium transition-all"
             to={`/product/${product?.id}`}
           >
             Xem chi tiết

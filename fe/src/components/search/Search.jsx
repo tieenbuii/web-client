@@ -92,7 +92,7 @@ const Search = ({ onClickItem, keyword }) => {
                       {" "}
                       {formatPrice(item?.price)}
                     </span>
-                    <span className="text-sm font-normal">
+                    <span className="text-sm font-normal mr-3">
                       {" "}
                       - {item?.percent}%
                     </span>

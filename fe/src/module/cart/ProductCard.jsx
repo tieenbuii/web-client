@@ -23,7 +23,7 @@ const ProductCard = ({ data }) => {
           {data.product.title}
         </span>
         <span className="text-sm text-[#8e8db7]">SKU: {data.product.id}</span>
-        <span className="tertiary text-sm font-medium">
+        <span className="text-tertiary text-sm font-medium">
           Chỉ còn {data.product.inventory} sản phẩm{" "}
         </span>
       </div>

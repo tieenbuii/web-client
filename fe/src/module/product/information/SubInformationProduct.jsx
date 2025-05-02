@@ -120,12 +120,14 @@ const SubInformationProduct = ({ data }) => {
         </span>
       </div>
       {data?.inventory > 0 && data?.inventory < 5 && (
-        <span className="tertiary font-medium mb-4">
+        <span className="text-tertiary font-medium mb-4">
           Chỉ còn {data?.inventory} sản phẩm
         </span>
       )}
       {data?.inventory === 0 && (
-        <span className="tertiary font-medium mb-4">Sản phẩm hết hàng</span>
+        <span className="text-tertiary font-medium mb-4">
+          Sản phẩm hết hàng
+        </span>
       )}
       <span className="text-2xl font-semibold text-primary mb-2">
         {formatPrice(data?.promotion)}
@@ -134,14 +136,14 @@ const SubInformationProduct = ({ data }) => {
         <span className="text-lg line-through text-slate-400 ">
           {formatPrice(data?.price)}
         </span>
-        <span className="text-blue text-lg"> - {data?.percent}%</span>
+        <span className="text-blue text-lg mr-3"> - {data?.percent}%</span>
       </div>
       <span className="w-full border-dotted border-2 mb-6"></span>
       {data?.inventory > 0 && (
         <>
           <div className="flex items-center justify-between px-10 option">
             <button
-              className="px-8 py-3 bg-blue-800 text-white text-lg font-medium rounded-md w-[220px] edit"
+              className="px-8 py-3 bg-primary text-white text-lg font-medium rounded-md w-[220px] edit"
               type="button"
               onClick={handleBuy}
             >

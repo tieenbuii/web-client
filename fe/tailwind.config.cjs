@@ -11,6 +11,11 @@ module.exports = {
         secondary: "#FFDB00",
         tertiary: "#FFA400",
       },
+      backgroundColor: {
+        primary: "#d72229",
+        secondary: "#FFDB00",
+        tertiary: "#FFA400",
+      },
       width: {
         custom: "calc(80% + 50px)",
         customm: "calc(85% + 50px)",
