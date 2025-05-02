@@ -102,11 +102,11 @@ const Navbar = () => {
   }, [show]);
 
   return (
-    <nav className="max-w-full bg-white h-[60px] md:h-[80px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5 px-[8px] md:px-[20px]">
-      <div className="container flex items-center h-full justify-between">
+    <nav className="max-w-full bg-white h-[100px] md:h-[80px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5 px-[8px] md:px-[20px]">
+      <div className="container flex items-center h-[60%] justify-between">
         <div className="flex items-center justify-center gap-2">
           <Link to="/" className="flex items-center">
-            <div className="w-auto h-[32px] md:h-[40px] lg:h-[55px] object-cover">
+            <div className="w-auto h-[30px] md:h-[35px] lg:h-[55px] object-cover">
               <img
                 src="/images/logo.png"
                 alt="logo"
@@ -118,7 +118,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className="max-w-full w-[100%] md:w-[590px] xl:w-[650px] flex items-center relative"
+          className="max-w-full w-[100%] md:w-[570px] xl:w-[650px] flex items-center relative"
           ref={nodeRef}
         >
           <input
@@ -207,7 +207,7 @@ const Navbar = () => {
           {cart?.length > 0 ? <Cart /> : <CartHollow />}
         </div>
       </div>
-      <div className="bg-primary flex text-white justify-center">
+      <div className="container bg-primary flex text-white items-center justify-center h-[40%">
         <Link to="/" className="py-2 px-4 hover:text-secondary transition-all">
           Trang chủ
         </Link>
