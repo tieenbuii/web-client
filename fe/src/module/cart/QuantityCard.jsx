@@ -95,7 +95,7 @@ const QuantityCard = ({ data }) => {
         </span>
       </div>
       <span
-        className="text-sm font-semibold text-blue-700 hover:text-red-700 cursor-pointer"
+        className="text-sm font-semibold text-primary hover:text-red-700 cursor-pointer"
         onClick={() => handleDelete(data.id)}
       >
         Xóa

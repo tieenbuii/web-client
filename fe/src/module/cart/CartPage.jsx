@@ -142,7 +142,7 @@ const CartPage = () => {
                   <span className="text-[#8b8f9b] text-base font-medium">
                     Thành tiền
                   </span>
-                  <span className="text-blue-700 font-semibold text-xl">
+                  <span className="text-primary font-semibold text-xl">
                     {formatPrice(
                       cart?.reduce(
                         (count, item) =>

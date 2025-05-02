@@ -120,16 +120,14 @@ const SubInformationProduct = ({ data }) => {
         </span>
       </div>
       {data?.inventory > 0 && data?.inventory < 5 && (
-        <span className="text-orange-500 font-medium mb-4">
+        <span className="tertiary font-medium mb-4">
           Chỉ còn {data?.inventory} sản phẩm
         </span>
       )}
       {data?.inventory === 0 && (
-        <span className="text-orange-500 font-medium mb-4">
-          Sản phẩm hiện tại hết hàng
-        </span>
+        <span className="tertiary font-medium mb-4">Sản phẩm hết hàng</span>
       )}
-      <span className="text-2xl font-semibold text-blue-700 mb-2">
+      <span className="text-2xl font-semibold text-primary mb-2">
         {formatPrice(data?.promotion)}
       </span>
       <div className="flex items-center mb-6">
@@ -150,7 +148,7 @@ const SubInformationProduct = ({ data }) => {
               MUA NGAY
             </button>
             <button
-              className="px-3 py-3  text-blue-700 text-lg font-medium rounded-md border-2 border-blue-700 edit"
+              className="px-3 py-3  text-primary text-lg font-medium rounded-md border-2 border-blue-700 edit"
               type="button"
               onClick={handleAddCart}
             >

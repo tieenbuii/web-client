@@ -6,7 +6,7 @@ const AuthenticationPage = ({ children, className = "" }) => {
     <div
       className={`max-w-[1000px] w-full bg-white mx-auto mt-5 rounded-xl ${className}`}
     >
-      <Link to="/">
+      {/* <Link to="/">
         <div className="w-[130px] h-[110px] md:w-[200px] md:h-[150px] mx-auto">
           <img
             src="/images/logo.png"
@@ -14,10 +14,10 @@ const AuthenticationPage = ({ children, className = "" }) => {
             className=" w-full h-full object-cover"
           />
         </div>
-      </Link>
+      </Link> */}
       <div className="text-center">
         <div className="text-xl md:text-4xl font-bold text-[#1DC071]">
-          Welcome to Pine Perfume
+          Chào mừng tới với Pine Perfume
         </div>
       </div>
       {children}

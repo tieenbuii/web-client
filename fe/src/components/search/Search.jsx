@@ -84,7 +84,7 @@ const Search = ({ onClickItem, keyword }) => {
                   >
                     {item?.title}
                   </span>
-                  <div className="font-medium text-base text-blue-700">
+                  <div className="font-medium text-base text-primary">
                     {formatPrice(item?.promotion)}
                   </div>
                   <div className="flex items-center">

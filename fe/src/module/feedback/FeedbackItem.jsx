@@ -110,7 +110,7 @@ const FeedbackItem = ({ data }) => {
           {current?._id === data?.user?._id && (
             <div className="flex items-center justify-end gap-x-4">
               <div
-                className="flex items-center justify-end gap-x-2 cursor-pointer text-blue-500 hover:text-blue-700"
+                className="flex items-center justify-end gap-x-2 cursor-pointer text-blue-500 hover:text-primary"
                 onClick={() => setShowModal(true)}
               >
                 <span>

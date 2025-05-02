@@ -26,7 +26,7 @@ const InformationOrder = ({ data }) => {
         <span className="text-sm text-[#a28faa]">
           Số lượng: {data.quantity}
         </span>
-        <span className="text-base font-semibold text-blue-700">
+        <span className="text-base font-semibold text-primary">
           {formatPrice(data.product.promotion)}
         </span>
         <span className="text-sm text-[#a28faa] line-through">
