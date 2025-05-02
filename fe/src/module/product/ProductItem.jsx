@@ -61,7 +61,7 @@ const ProductItem = ({
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-6 h-6 text-green-700"
+              className="w-6 h-6 text-primary"
             >
               <path
                 strokeLinecap="round"
@@ -86,15 +86,15 @@ const ProductItem = ({
           <div className="flex items-center">
             {product?.promotion !== product?.price ? (
               <>
-                <span className="hidden sm:block text-sm line-through text-slate-400">
+                <span className="hidden sm:block text-sm line-through text-slate-400 mr-2">
                   {formatPrice(product?.price)}
                 </span>
 
-                <span className="sm:hidden text-sm line-through text-slate-400">
+                <span className="sm:hidden text-sm line-through text-slate-400 mr-2">
                   {product?.price / 1000000 + " tr "}
                 </span>
 
-                <span className="text-blue text-sm mr-3">
+                <span className="text-blue text-sm">
                   {" "}
                   - {product?.percent}%
                 </span>
@@ -123,7 +123,7 @@ const ProductItem = ({
             </button>
           )} */}
           <Link
-            className="sm:p-2 text-secondary border border-solid border-green-600 rounded-lg text-sm font-medium transition-all"
+            className="sm:p-2 text-primary border border-solid border-primary rounded-lg text-sm font-medium transition-all"
             to={`/product/${product?.id}`}
           >
             Xem chi tiết

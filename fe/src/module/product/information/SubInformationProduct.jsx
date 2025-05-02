@@ -136,7 +136,7 @@ const SubInformationProduct = ({ data }) => {
         <span className="text-lg line-through text-slate-400 ">
           {formatPrice(data?.price)}
         </span>
-        <span className="text-blue text-lg mr-3"> - {data?.percent}%</span>
+        <span className="text-blue text-lg"> - {data?.percent}%</span>
       </div>
       <span className="w-full border-dotted border-2 mb-6"></span>
       {data?.inventory > 0 && (
