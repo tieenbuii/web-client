@@ -106,7 +106,7 @@ const Navbar = () => {
       <div className="container flex items-center h-full justify-between">
         <div className="flex items-center justify-center gap-2">
           <Link to="/" className="flex items-center">
-            <div className="w-auto h-[35px] md:h-[45px] lg:h-[55px] object-cover">
+            <div className="w-auto h-[32px] md:h-[40px] lg:h-[55px] object-cover">
               <img
                 src="/images/logo.png"
                 alt="logo"
@@ -207,7 +207,7 @@ const Navbar = () => {
           {cart?.length > 0 ? <Cart /> : <CartHollow />}
         </div>
       </div>
-      <div className="bg-hero-gradient flex text-white justify-center">
+      <div className="bg-primary flex text-white justify-center">
         <Link to="/" className="py-2 px-4 hover:text-secondary transition-all">
           Trang chủ
         </Link>
