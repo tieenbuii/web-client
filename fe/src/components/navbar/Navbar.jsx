@@ -130,7 +130,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div
+        {/* <div
           className="max-w-full w-[100%] md:w-[530px] xl:w-[600px] flex items-center relative"
           ref={nodeRef}
         >
@@ -165,8 +165,43 @@ const Navbar = () => {
           {keyword && show === true && (
             <Search onClickItem={handleClose} keyword={search} />
           )}
+        </div> */}
+        <div
+          className="max-w-full w-[100%] md:w-[590px] xl:w-[650px] flex items-center relative"
+          ref={nodeRef}
+        >
+          <input
+            type="text"
+            className="py-1 md:py-3 px-4 rounded-l-lg text-base w-[80%] sm:w-[85%] xl:w-[600px] flex-shrink xl:flex-shrink-0 text-black"
+            id="search"
+            placeholder="Nhập tên nước hoa ..."
+            onClick={handleClick}
+            onChange={handleChange}
+            value={keyword}
+          />
+          <div
+            className="w-[50px] bg-yellow-400 h-[32px] md:h-[48px] rounded-r-lg flex items-center justify-center cursor-pointer"
+            onClick={handleClickSearch}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+          </div>
+          {keyword && show === true && (
+            <Search onClickItem={handleClose} keyword={search} />
+          )}
         </div>
-
         {!isLoggedIn ? (
           <Link
             to="/sign-in"
