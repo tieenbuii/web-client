@@ -129,16 +129,28 @@ const SubInformationProduct = ({ data }) => {
           Sản phẩm hết hàng
         </span>
       )}
-      <span className="text-2xl font-semibold text-primary mb-2">
+      {/* <span className="text-2xl font-semibold text-primary mb-2">
         {formatPrice(data?.promotion)}
       </span>
       <div className="flex items-center mb-6">
-        <span className="text-lg line-through text-slate-400 ">
+        <span className="text-lg line-through text-slate-400 mr-3">
           {formatPrice(data?.price)}
         </span>
         <span className="text-blue text-lg"> - {data?.percent}%</span>
-      </div>
-      <span className="w-full border-dotted border-2 mb-6"></span>
+      </div> */}
+      <span className="text-2xl font-semibold text-primary mb-2">
+        {formatPrice(data?.promotion)}
+      </span>
+
+      {data?.promotion !== data?.price && (
+        <div className="flex items-center mb-6">
+          <span className="text-lg line-through text-slate-400 mr-3">
+            {formatPrice(data?.price)}
+          </span>
+          <span className="text-blue text-lg">- {data?.percent}%</span>
+        </div>
+      )}
+      {/* <span className="w-full border-dotted border-2 mb-6"></span> */}
       {data?.inventory > 0 && (
         <>
           <div className="flex items-center justify-between px-10 option">
@@ -150,14 +162,14 @@ const SubInformationProduct = ({ data }) => {
               MUA NGAY
             </button>
             <button
-              className="px-3 py-3  text-primary text-lg font-medium rounded-md border-2 border-blue-700 edit"
+              className="px-3 py-3  text-primary text-lg font-medium rounded-md border-2 border-primary edit"
               type="button"
               onClick={handleAddCart}
             >
               THÊM VÀO GIỎ HÀNG
             </button>
           </div>
-          <span className="w-full border-dotted border-2 my-6"></span>
+          {/* <span className="w-full border-dotted border-2 my-6"></span> */}
         </>
       )}
     </div>

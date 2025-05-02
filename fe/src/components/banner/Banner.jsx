@@ -9,7 +9,7 @@ import "swiper/css/autoplay";
 
 const Banner = () => {
   return (
-    <div className=" max-w-[100vw] mt-2 md:mt-5 lg:mt-7 px-[8px] md:px-[20px]">
+    <div className=" max-w-[100vw] mt-2 md:mt-3 lg:mt-5 px-[8px] md:px-[20px]">
       <div className="container">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}

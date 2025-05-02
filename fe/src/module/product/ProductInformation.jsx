@@ -129,7 +129,7 @@ const ProductInformation = () => {
         </div>
       )}
       {statusId === action_status.SUCCEEDED && (
-        <div className="max-w-[100vw] px-[8px] md:px-[20px] mt-2 md:mt-5 lg:mt-7">
+        <div className="max-w-[100vw] px-[8px] md:px-[20px] mt-2 md:mt-3 lg:mt-5">
           <div className="container max-w-full">
             <div className="flex items-center">
               <Link

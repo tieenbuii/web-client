@@ -50,7 +50,7 @@ const CartPage = () => {
     navigate("/checkout");
   };
   return (
-    <div className="px-[8px] md:px-[20px] mt-2 md:mt-5 lg:mt-7">
+    <div className="px-[8px] md:px-[20px] mt-2 md:mt-3 lg:mt-5">
       <div className="container">
         <div className="flex items-center">
           <Link
