@@ -172,7 +172,7 @@ const Navbar = () => {
         >
           <input
             type="text"
-            className="py-1 md:py-3 px-4 rounded-l-lg border-2 border-gray-400 text-base w-[80%] sm:w-[85%] xl:w-[600px] flex-shrink xl:flex-shrink-0 text-black"
+            className="py-1 md:py-3 px-4 rounded-l-lg border-[1px] border-gray-400 text-base w-[80%] sm:w-[85%] xl:w-[600px] flex-shrink xl:flex-shrink-0 text-black"
             id="search"
             placeholder="Nhập tên nước hoa ..."
             onClick={handleClick}
@@ -180,7 +180,7 @@ const Navbar = () => {
             value={keyword}
           />
           <div
-            className="w-[50px] bg-primary h-[32px] md:h-[48px] rounded-r-lg flex items-center justify-center cursor-pointer"
+            className="w-[50px] bg-primary h-[32px] md:h-[48px] border-[1px] border-primary rounded-r-lg flex items-center justify-center cursor-pointer"
             onClick={handleClickSearch}
           >
             <svg
