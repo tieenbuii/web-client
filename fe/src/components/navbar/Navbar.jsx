@@ -102,31 +102,11 @@ const Navbar = () => {
   }, [show]);
 
   return (
-    <nav className="max-w-full bg-primary h-[60px] md:h-[80px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5 px-[8px] md:px-[20px]">
+    <nav className="max-w-full bg-white h-[60px] md:h-[80px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5 px-[8px] md:px-[20px]">
       <div className="container flex items-center h-full justify-between">
         <div className="flex items-center justify-center gap-2">
-          <Link
-            title="Tất cả sản phẩm"
-            className="cursor-pointer hidden xl:block"
-            to="/product"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-10 h-10 text-white"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </Link>
           <Link to="/" className="flex items-center">
-            <div className="w-[60px] h-[80px] md:w-[100px] md:h-[120px]">
+            <div className="w-auto h-[35px] md:h-[45px] lg:h-[55px] object-cover">
               <img
                 src="/images/logo.png"
                 alt="logo"
@@ -134,12 +114,6 @@ const Navbar = () => {
                 title="Trang chủ"
               />
             </div>
-            <span
-              className="text-white font-medium text-2xl hidden xl:inline-block"
-              title="Trang chủ"
-            >
-              PINE
-            </span>
           </Link>
         </div>
 
@@ -232,6 +206,35 @@ const Navbar = () => {
           </div>
           {cart?.length > 0 ? <Cart /> : <CartHollow />}
         </div>
+      </div>
+      <div className="bg-hero-gradient flex text-white justify-center">
+        <Link to="/" className="py-2 px-4 hover:text-secondary transition-all">
+          Trang chủ
+        </Link>
+        <Link
+          to="/about"
+          className="py-2 px-4 hover:text-secondary transition-all"
+        >
+          Giới thiệu
+        </Link>
+        <Link
+          to="/product"
+          className="py-2 px-4 hover:text-secondary transition-all"
+        >
+          Sản phẩm
+        </Link>
+        <Link
+          to="/contact"
+          className="py-2 px-4 hover:text-secondary transition-all"
+        >
+          Liên hệ
+        </Link>
+        <Link
+          to="/faq"
+          className="py-2 px-4 hover:text-secondary transition-all"
+        >
+          Hỏi đáp
+        </Link>
       </div>
     </nav>
   );

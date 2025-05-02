@@ -93,16 +93,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="flex items-center justify-center mt-8">
-          <div className="w-16 h-16 mr-4">
-            <img
-              src="/images/logo.png"
-              alt="Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <span className="text-2xl font-bold">Pine Perfume</span>
-        </div>
       </div>
     </footer>
   );

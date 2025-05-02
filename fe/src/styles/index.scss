@@ -134,7 +134,7 @@ input::-webkit-inner-spin-button {
 .ProductDetail {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 350px;
-  padding: 40px 0px;
+  padding: 15px 0px;
   gap: 0 30px;
   @media (max-width: 1023px) {
     grid-template-columns: 1fr;
