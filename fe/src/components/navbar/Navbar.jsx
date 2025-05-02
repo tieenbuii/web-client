@@ -102,11 +102,11 @@ const Navbar = () => {
   }, [show]);
 
   return (
-    <nav className="max-w-full bg-white h-[150px] md:h-[80px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5">
+    <nav className="max-w-full bg-white h-[100px] md:h-[120px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5">
       <div className="container flex items-center h-[70%] justify-between px-[8px] md:px-[20px] py-3">
         <div className="flex items-center justify-center gap-2">
           <Link to="/" className="flex items-center">
-            <div className="w-auto h-[30px] md:h-[35px] lg:h-[55px] object-cover">
+            <div className="w-auto h-[32px] md:h-[35px] lg:h-[48px] object-cover">
               <img
                 src="/images/logo.png"
                 alt="logo"
@@ -118,12 +118,12 @@ const Navbar = () => {
         </div>
 
         <div
-          className="max-w-full w-[100%] md:w-[570px] xl:w-[650px] flex items-center relative"
+          className="max-w-full w-[100%] md:w-[530px] xl:w-[600px] flex items-center relative"
           ref={nodeRef}
         >
           <input
             type="text"
-            className="py-1 md:py-3 px-4 rounded-l-lg text-base w-[80%] sm:w-[85%] xl:w-[600px] flex-shrink xl:flex-shrink-0 text-black"
+            className="py-1 md:py-3 px-4 rounded-l-lg border-primary border-2 text-base w-[80%] sm:w-[85%] xl:w-[600px] flex-shrink xl:flex-shrink-0 text-black"
             id="search"
             placeholder="Nhập tên nước hoa ..."
             onClick={handleClick}
@@ -131,7 +131,7 @@ const Navbar = () => {
             value={keyword}
           />
           <div
-            className="w-[50px] bg-yellow-400 h-[32px] md:h-[48px] rounded-r-lg flex items-center justify-center cursor-pointer"
+            className="w-[50px] bg-yellow-400 h-[32px] md:h-[35px] lg:h-[48px] rounded-r-lg flex items-center justify-center cursor-pointer"
             onClick={handleClickSearch}
           >
             <svg
@@ -165,7 +165,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-8 h-8 text-white"
+              className="w-8 h-8 text-primary"
             >
               <path
                 strokeLinecap="round"
@@ -188,7 +188,7 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8 text-white cursor-pointer"
+            className="w-8 h-8 text-primary cursor-pointer"
           >
             <path
               strokeLinecap="round"
@@ -197,11 +197,12 @@ const Navbar = () => {
             />
           </svg>
           <div className="flex flex-col items-start justify-between">
-            <span className="font-medium text-sm hidden lg:inline-block">
+            <span className="font-medium text-sm hidden lg:inline-block text-black">
               Giỏ hàng của bạn
             </span>
-            <span className="font-medium text-sm hidden lg:inline-block">
-              ({cart?.length || 0}) sản phẩm
+            <span className="font-medium text-sm hidden lg:inline-block text-black">
+              <span className="text-primary mr-1">({cart?.length || 0})</span>
+              <span>sản phẩm</span>
             </span>
           </div>
           {cart?.length > 0 ? <Cart /> : <CartHollow />}

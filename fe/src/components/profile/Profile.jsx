@@ -52,9 +52,9 @@ const Profile = ({ data }) => {
         <div className="avatar md:w-[48px] ">
           <img src={data.avatar} alt="" className="bg-red-600" />
         </div>
-        <div className="hidden lg:flex flex-col items-start justify-center text-white text-base">
-          <span className="text-sm font-medium">Xin chào ,</span>
-          <span className="text-sm font-medium">{data.name}</span>
+        <div className="hidden lg:flex flex-col items-start justify-center text-base">
+          <span className="text-sm font-medium text-black">Xin chào ,</span>
+          <span className="text-sm font-medium text-primary">{data.name}</span>
         </div>
         <Dropdown />
       </ProfileStyles>
