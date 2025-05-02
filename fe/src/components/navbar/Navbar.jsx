@@ -102,8 +102,8 @@ const Navbar = () => {
   }, [show]);
 
   return (
-    <nav className="max-w-full bg-white h-[120px] md:h-[80px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5">
-      <div className="container flex items-center h-[70%] justify-between px-[8px] md:px-[20px]">
+    <nav className="max-w-full bg-white h-[150px] md:h-[80px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5">
+      <div className="container flex items-center h-[70%] justify-between px-[8px] md:px-[20px] py-3">
         <div className="flex items-center justify-center gap-2">
           <Link to="/" className="flex items-center">
             <div className="w-auto h-[30px] md:h-[35px] lg:h-[55px] object-cover">
@@ -207,7 +207,7 @@ const Navbar = () => {
           {cart?.length > 0 ? <Cart /> : <CartHollow />}
         </div>
       </div>
-      <div className="container bg-primary flex text-white items-center justify-center h-[30%]">
+      <div className="w-full bg-primary flex text-white items-center justify-center h-[30%]">
         <Link to="/" className="py-2 px-4 hover:text-secondary transition-all">
           Trang chủ
         </Link>
