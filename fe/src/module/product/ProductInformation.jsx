@@ -35,8 +35,7 @@ const ProductInformation = () => {
 
   useEffect(() => {
     try {
-      if(productId?.brand)
-      dispatch(getProductBrand(productId?.brand?.id));
+      if (productId?.brand) dispatch(getProductBrand(productId?.brand?.id));
     } catch (error) {
       console.log(error.message);
     }
@@ -130,12 +129,12 @@ const ProductInformation = () => {
         </div>
       )}
       {statusId === action_status.SUCCEEDED && (
-        <div className="max-w-[100vw] px-[8px] md:px-[20px] mt-5 md:mt-7 lg:mt-10">
+        <div className="max-w-[100vw] px-[8px] md:px-[20px] mt-2 md:mt-5 lg:mt-7">
           <div className="container max-w-full">
             <div className="flex items-center">
               <Link
                 to="/"
-                className=" text-base text-[#a8b4c9] flex items-center font-medium min-w-[120px]"
+                className=" text-base text-[#898889] flex items-center font-medium min-w-[120px]"
               >
                 Trang chủ
                 <svg
@@ -153,7 +152,7 @@ const ProductInformation = () => {
                   />
                 </svg>
               </Link>
-              <span className="text-base text-[#a8b4c9] font-medium truncate">
+              <span className="text-base text-[#898889] font-medium truncate">
                 {productId?.title}
               </span>
             </div>

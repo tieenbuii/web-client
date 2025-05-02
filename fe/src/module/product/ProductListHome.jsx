@@ -54,9 +54,13 @@ const ProductListHome = ({ data, bg = "", className = "" }) => {
     <div className={`${className} max-w-[100vw]`}>
       <div
         className={`container pt-[60px] md:pt-[40px] lg:pt-0 ${
-          bg === "bg1" ? 'bg-[url("../images/bg-laptop.png")] h-[460px]' : ""
+          bg === "bg1" ? 'bg-[url("../images/bg-Nước hoa.png")] h-[460px]' : ""
         }
-        ${bg === "bg2" ? 'bg-[url("../images/bg-laptop-1.png")] h-[460px]' : ""}
+        ${
+          bg === "bg2"
+            ? 'bg-[url("../images/bg-Nước hoa-1.png")] h-[460px]'
+            : ""
+        }
            bg-no-repeat max-w-full bg-cover bg-center rounded-lg relative z-20`}
       >
         <Swiper

@@ -50,12 +50,12 @@ const CartPage = () => {
     navigate("/checkout");
   };
   return (
-    <div className="px-[8px] md:px-[20px] mt-5 md:mt-7 lg:mt-10">
+    <div className="px-[8px] md:px-[20px] mt-2 md:mt-5 lg:mt-7">
       <div className="container">
         <div className="flex items-center">
           <Link
             to="/"
-            className=" text-base text-[#a8b4c9] flex items-center font-medium"
+            className=" text-base text-[#898889] flex items-center font-medium"
           >
             Trang chủ
             <svg
@@ -73,7 +73,7 @@ const CartPage = () => {
               />
             </svg>
           </Link>
-          <span className="text-base text-[#a8b4c9] font-medium">Giỏ hàng</span>
+          <span className="text-base text-[#898889] font-medium">Giỏ hàng</span>
         </div>
 
         {cart?.length > 0 ? (
