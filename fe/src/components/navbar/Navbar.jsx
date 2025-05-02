@@ -117,7 +117,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* <div
+        <div
           className="max-w-full w-[100%] md:w-[530px] xl:w-[600px] flex items-center relative"
           ref={nodeRef}
         >
@@ -152,43 +152,8 @@ const Navbar = () => {
           {keyword && show === true && (
             <Search onClickItem={handleClose} keyword={search} />
           )}
-        </div> */}
- <div
-          className="w-[250px] md:w-[420px] lg:w-[650px] flex items-center relative border rounded-lg"
-          ref={nodeRef}
-        >
-          <input
-            type="text"
-            className="py-1 px-3 md:py-2 lg:py-3 lg:px-4 rounded-l-lg text-sm lg:text-base w-[200px] md:w-[370px] lg:w-[600px] flex-shrink-0 text-black"
-            id="search"
-            placeholder="Bạn cần tìm gì?"
-            onClick={handleClick}
-            onChange={handleChange}
-            value={keyword}
-          />
-          <div
-            className="w-[50px] bg-hero-gradient h-[30px] md:h-[40px] lg:h-[48px] rounded-r-lg flex items-center justify-center cursor-pointer"
-            onClick={handleClickSearch}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-5 h-5 lg:w-7 lg:h-7"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
-          </div>
-          {keyword && show === true && (
-            <Search onClickItem={handleClose} keyword={search} />
-          )}
         </div>
+
         {!isLoggedIn ? (
           <Link
             to="/sign-in"
