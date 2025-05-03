@@ -165,7 +165,7 @@ const CartPage = () => {
                   </button>
                 ) : (
                   <button
-                    className=" bg-blue-700 text-white rounded-lg mx-auto py-2 mt-4 w-full"
+                    className=" bg-primary text-white rounded-lg mx-auto py-2 mt-4 w-full"
                     onClick={handleCheckout}
                   >
                     <span className="font-medium text-base ">TIẾP TỤC</span>

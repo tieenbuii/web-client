@@ -258,7 +258,7 @@ const PaymentList = () => {
                       {value?.payments === "refund" ? (
                         <Link
                           to={"/account/orders/" + value?.order}
-                          className="text-xs text-blue-500 hover:text-blue-600"
+                          className="text-xs text-blue-500 hover:text-primary"
                         >
                           Hoàn tiền đơn {value?.order.slice(0, 10)}...
                         </Link>
@@ -285,7 +285,7 @@ const PaymentList = () => {
                     </div>
                     <Link
                       to={"/account/orders/" + value?.id}
-                      className="text-xs text-blue-500 hover:text-blue-600"
+                      className="text-xs text-blue-500 hover:text-primary"
                     >
                       Đơn hàng {value?.id.slice(0, 10)}...
                     </Link>

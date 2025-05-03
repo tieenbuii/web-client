@@ -286,7 +286,7 @@ const UserOrder = () => {
                           order.map((item) => (
                             <tr className="text-base" key={item._id}>
                               <td
-                                className="cursor-pointer text-blue-600 hover:text-blue-900"
+                                className="cursor-pointer text-primary hover:text-blue-900"
                                 onClick={() =>
                                   navigate(`/account/orders/${item._id}`)
                                 }
@@ -352,7 +352,7 @@ const UserOrder = () => {
                           order.map((item) => (
                             <tr className="text-base" key={item._id}>
                               <td
-                                className="cursor-pointer text-blue-600 hover:text-blue-900"
+                                className="cursor-pointer text-primary hover:text-blue-900"
                                 onClick={() =>
                                   navigate(`/account/orders/${item._id}`)
                                 }
@@ -385,7 +385,7 @@ const UserOrder = () => {
                           order.map((item) => (
                             <tr className="text-base" key={item._id}>
                               <td
-                                className="cursor-pointer text-blue-600 hover:text-blue-900"
+                                className="cursor-pointer text-primary hover:text-blue-900"
                                 onClick={() =>
                                   navigate(`/account/orders/${item._id}`)
                                 }
@@ -418,7 +418,7 @@ const UserOrder = () => {
                           order.map((item) => (
                             <tr className="text-base" key={item._id}>
                               <td
-                                className="cursor-pointer text-blue-600 hover:text-blue-900"
+                                className="cursor-pointer text-primary hover:text-blue-900"
                                 onClick={() =>
                                   navigate(`/account/orders/${item._id}`)
                                 }
@@ -451,7 +451,7 @@ const UserOrder = () => {
                           order.map((item) => (
                             <tr className="text-base" key={item._id}>
                               <td
-                                className="cursor-pointer text-blue-600 hover:text-blue-900"
+                                className="cursor-pointer text-primary hover:text-blue-900"
                                 onClick={() =>
                                   navigate(`/account/orders/${item._id}`)
                                 }
@@ -485,7 +485,7 @@ const UserOrder = () => {
                           order.map((item) => (
                             <tr className="text-base" key={item._id}>
                               <td
-                                className="cursor-pointer text-blue-600 hover:text-blue-900"
+                                className="cursor-pointer text-primary hover:text-blue-900"
                                 onClick={() =>
                                   navigate(`/account/orders/${item._id}`)
                                 }

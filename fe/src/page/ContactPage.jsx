@@ -44,7 +44,7 @@ export default function ContactPage() {
               <div className="flex space-x-4 mt-2 text-2xl">
                 <a
                   href="#"
-                  className="text-blue-600 hover:text-blue-800"
+                  className="text-primary hover:text-blue-800"
                   aria-label="Facebook"
                 >
                   <FaFacebookF />

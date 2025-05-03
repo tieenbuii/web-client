@@ -33,7 +33,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <path
             strokeLinecap="round"
@@ -50,7 +50,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <path
             strokeLinecap="round"
@@ -68,7 +68,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <path
             strokeLinecap="round"
@@ -89,7 +89,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <path
             strokeLinecap="round"
@@ -102,7 +102,7 @@ const InformationService = () => {
           viewBox="0 0 1024 1024"
           width="1em"
           height="1em"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <path
             fill="currentColor"
@@ -119,7 +119,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <path
             strokeLinecap="round"
@@ -132,7 +132,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           width="1em"
           height="1em"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <g
             fill="none"
@@ -154,7 +154,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <path
             strokeLinecap="round"
@@ -167,7 +167,7 @@ const InformationService = () => {
           viewBox="0 0 24 24"
           width="1em"
           height="1em"
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-primary"
         >
           <g
             fill="none"

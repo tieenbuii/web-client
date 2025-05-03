@@ -373,7 +373,7 @@ const ProductFilterPage = () => {
                         );
                       })}
                   </Accordion>
-                  <Accordion title="Dung tích">
+                  <Accordion title="Dung tích (ml)">
                     {capacityData.length > 0 &&
                       capacityData.map((item) => {
                         return (

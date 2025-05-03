@@ -217,7 +217,7 @@
 //                     Thông tin đơn hàng
 //                   </span>
 //                   <span
-//                     className="text-base font-medium text-blue-600 cursor-pointer hover:text-blue-800"
+//                     className="text-base font-medium text-primary cursor-pointer hover:text-blue-800"
 //                     onClick={() => navigate("/cart")}
 //                   >
 //                     Chỉnh sửa
