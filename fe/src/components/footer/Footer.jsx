@@ -92,6 +92,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="py-2 text-sm bg-primary text-white text-center">
+        <p>&copy Bản quyền thuộc Pine Perfume</p>
+      </div>
     </footer>
   );
 };

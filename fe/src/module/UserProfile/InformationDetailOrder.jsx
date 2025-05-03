@@ -149,7 +149,7 @@ const InformationDetailOrder = () => {
         <div className="container flex flex-col">
           <div className="flex items-center justify-start gap-x-5">
             <button
-              className="p-2 bg-white rounded-lg hover:bg-blue-600 hover:text-white"
+              className="p-2 bg-white rounded-lg hover:bg-primary hover:text-white"
               onClick={() => navigate(-1)}
             >
               <svg
