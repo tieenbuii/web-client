@@ -122,7 +122,7 @@ const CartPage = () => {
                   </tbody>
                 </Table>
               </div>
-              <div className="information-price bg-white mt-7 text-base rounded-lg flex flex-col self-end justify-start p-3 xl:self-start w-[350px]">
+              <div className="information-price bg-white mt-7 text-base rounded-lg flex flex-col self-end justify-start p-3 xl:self-start max-w-[350px]">
                 <span className="font-medium pl-[30px]">Thanh toán</span>
                 <div className="flex items-center justify-between py-4">
                   <span className="text-[#8b8f9b] text-base font-medium">

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="text-black bg-white mt-5 px-[8px] md:px-[20px]">
-      <div className="container">
+    <footer className="text-black bg-white mt-5">
+      <div className="container px-[8px] md:px-[20px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 pb-4">
           <div>
             <h2 className="text-lg font-semibold mb-4">Về PINE PERFUME</h2>
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-primary py-2 text-sm text-center text-white">
+      <div className="bg-primary py-1 text-sm text-center text-white">
         Copyright 2025 © PINE perfume. All Rights Reserved.
       </div>
     </footer>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AboutPage = () => {
   return (
     <div>
-      <section class="bg-gradient-to-b from-white to-gray-50 py-16 px-4 md:px-12 lg:px-20">
+      <section class="bg-gradient-to-b from-white to-gray-50 py-8 px-4 md:px-12 lg:px-20">
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-10">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary mb-3 leading-snug">
