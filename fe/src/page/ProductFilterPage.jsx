@@ -346,7 +346,7 @@ const ProductFilterPage = () => {
                             onChange={(input) => {
                               filterSelect("Categorys", input.checked, item);
                             }}
-                            checked={filter.color.includes(item.id)}
+                            checked={filter.category.includes(item.id)}
                           />
                         );
                       })}
