@@ -273,7 +273,7 @@ input::-moz-input-placeholder {
 }
 
 .clock {
-  background-image: linear-gradient(to right bottom, #e21c34, #500b28);
+  background-image: linear-gradient(to right bottom, #ED213A, #93291E);
 }
 
 .profile:hover .dropdown {

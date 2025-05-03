@@ -34,7 +34,7 @@ const ButtonStyles = styled.button`
     props.bg === "primary" &&
     css`
       color: white;
-      background-image: linear-gradient(to right bottom, #e21c34, #500b28);
+      background-image: linear-gradient(to right bottom, #ED213A, #93291E);
     `};
 
   &:disabled {

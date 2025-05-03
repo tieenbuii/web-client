@@ -33,7 +33,7 @@ const PageNotFoundStyles = styled.div`
     display: inline-block;
     padding: 15px 30px;
     color: black;
-    background-image: linear-gradient(to right top, #e21c34, #500b28);
+    background-image: linear-gradient(to right top, #ED213A, #93291E);
     border-radius: 8px;
     font-weight: 500;
   }
