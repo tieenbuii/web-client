@@ -4,17 +4,16 @@ import FilterProduct from "../module/filter/FilterProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { action_status } from "../utils/constants/status";
 import { useEffect } from "react";
-import { getBrand, getProductFilter } from "../redux/product/productSlice";
+import { getBrand, getProductFilter, getCategory } from "../redux/product/productSlice";
 import { useState } from "react";
 import Pagination from "react-js-pagination";
 import FilterSort from "../module/filter/FilterSort";
 import queryString from "query-string";
 import FilterPrice from "../module/filter/FilterPrice";
-import { colorData } from "../api/colorData";
 import Accordion from "../components/accordion/Accordion";
 import Filter from "../components/filter/Filter";
-import { ramData } from "../api/ramData";
-import { demandData } from "../api/demandData";
+import { seasonData } from "../api/seasonData";
+import { capacityData } from "../api/capacityData";
 import BackToTopButton from "../components/backtotop/BackToTopButton";
 import Skeleton from "../components/skeleton/Skeleton";
 import SkeletonItem from "../components/skeleton/SkeletonItem";
@@ -70,12 +69,20 @@ const ProductFilterPage = () => {
       console.log(error.message);
     }
   }, []);
-
+  useEffect(() => {
+    try {
+      if (statusCategory === action_status.IDLE) {
+        dispatch(getCategory());
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, []);
   const initFilter = {
     brand: params?.brand?.split(",") || [],
-    color: params?.color?.split(",") || [],
-    ram: params?.ram?.split(",") || [],
-    demand: params?.demand?.split(",") || [],
+    category: params?.category?.split(",") || [],
+    season: params?.season?.split(",") || [],
+    capacity: params?.capacity?.split(",") || [],
   };
 
   const [filter, setFilter] = useState(initFilter);
@@ -102,22 +109,22 @@ const ProductFilterPage = () => {
             brand: [...filter.brand, item.id],
           });
           break;
-        case "Colors":
+        case "Categorys":
           setFilter({
             ...filter,
-            color: [...filter.color, item.name],
+            category: [...filter.category, item.id],
           });
           break;
-        case "Rams":
+        case "Seasons":
           setFilter({
             ...filter,
-            ram: [...filter.ram, item.name],
+            season: [...filter.season, item.name],
           });
           break;
-        case "Demands":
+        case "Capacitys":
           setFilter({
             ...filter,
-            demand: [...filter.demand, item.value],
+            capacity: [...filter.capacity, item.value],
           });
           break;
         default:
@@ -128,17 +135,17 @@ const ProductFilterPage = () => {
           const newBrands = filter.brand.filter((e) => e !== item.id);
           setFilter({ ...filter, brand: newBrands });
           break;
-        case "Colors":
-          const newColors = filter.color.filter((e) => e !== item.name);
-          setFilter({ ...filter, color: newColors });
+        case "Categorys":
+          const newCategorys = filter.category.filter((e) => e !== item.id);
+          setFilter({ ...filter, category: newCategorys });
           break;
-        case "Rams":
-          const newRams = filter.ram.filter((e) => e !== item.name);
-          setFilter({ ...filter, ram: newRams });
+        case "Seasons":
+          const newSeasons = filter.season.filter((e) => e !== item.name);
+          setFilter({ ...filter, season: newSeasons });
           break;
-        case "Demands":
-          const newDemands = filter.demand.filter((e) => e !== item.value);
-          setFilter({ ...filter, demand: newDemands });
+        case "Capacitys":
+          const newCapacitys = filter.capacity.filter((e) => e !== item.value);
+          setFilter({ ...filter, capacity: newCapacitys });
           break;
         default:
       }
@@ -174,9 +181,9 @@ const ProductFilterPage = () => {
   useEffect(() => {
     if (
       filter.brand.length !== 0 ||
-      filter.color.length !== 0 ||
-      filter.ram.length !== 0 ||
-      filter.demand.length !== 0
+      filter.category.length !== 0 ||
+      filter.season.length !== 0 ||
+      filter.capacity.length !== 0
     ) {
       const filters = {
         ...queryParams,
@@ -329,47 +336,47 @@ const ProductFilterPage = () => {
                         );
                       })}
                   </Accordion>
-                  <Accordion title="Màu sắc" className="true">
-                    {colorData.length > 0 &&
-                      colorData.map((item) => {
+                  <Accordion title="Danh mục" className="true">
+                    {category.length > 0 &&
+                      category.map((item) => {
                         return (
                           <Filter
                             label={item.name}
                             key={item.id}
                             onChange={(input) => {
-                              filterSelect("Colors", input.checked, item);
+                              filterSelect("Categorys", input.checked, item);
                             }}
-                            checked={filter.color.includes(item.name)}
+                            checked={filter.color.includes(item.id)}
                           />
                         );
                       })}
                   </Accordion>
-                  <Accordion title="Ram">
-                    {ramData.length > 0 &&
-                      ramData.map((item) => {
+                  <Accordion title="Mùa khuyên dùng">
+                    {seasonData.length > 0 &&
+                      seasonData.map((item) => {
                         return (
                           <Filter
-                            label={`${item.name}GB`}
+                            label={`${item.name}`}
                             key={item.id}
                             onChange={(input) => {
-                              filterSelect("Rams", input.checked, item);
+                              filterSelect("Seasons", input.checked, item);
                             }}
-                            checked={filter.ram.includes(item.name)}
+                            checked={filter.season.includes(item.name)}
                           />
                         );
                       })}
                   </Accordion>
-                  <Accordion title="Nhu cầu">
-                    {demandData.length > 0 &&
-                      demandData.map((item) => {
+                  <Accordion title="Dung tích">
+                    {capacityData.length > 0 &&
+                      capacityData.map((item) => {
                         return (
                           <Filter
                             label={item.name}
                             key={item.id}
                             onChange={(input) => {
-                              filterSelect("Demands", input.checked, item);
+                              filterSelect("Capacitys", input.checked, item);
                             }}
-                            checked={filter.demand.includes(item.value)}
+                            checked={filter.capacity.includes(item.value)}
                           />
                         );
                       })}
@@ -377,7 +384,6 @@ const ProductFilterPage = () => {
                 </div>
               </>
             )}
-
             <div className="w-[95vw] xl:w-auto product-list">
               {statusFilter === action_status.LOADING && (
                 <div className="flex flex-col container rounded-lg bg-white">

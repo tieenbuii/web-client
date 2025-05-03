@@ -1,3 +1,4 @@
+import { get } from "lodash";
 import axiosClient from "./axiosClient";
 
 const productApi = {
@@ -13,5 +14,9 @@ const productApi = {
     const url = `/api/v1/brands`;
     return axiosClient.get(url);
   },
+  getCategory() {
+    const url = `/api/v1/categories`;
+    return axiosClient.get(url);
+  }
 };
 export default productApi;

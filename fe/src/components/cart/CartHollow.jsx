@@ -40,7 +40,7 @@ const CartHollow = () => {
           </span>
         </div>
         <button
-          className="bg-blue-700 px-3 py-2 mt-5  rounded-lg"
+          className="bg-primary px-3 py-2 mt-5  rounded-lg"
           type="button"
           onClick={() => navigate("/")}
         >
