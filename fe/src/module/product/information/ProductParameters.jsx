@@ -11,22 +11,22 @@ const ProductParameters = ({ data }) => {
             <td>{data?.brand?.name}</td>
           </tr>
           <tr>
-            <td>Bảo hành</td>
-            <td>12</td>
+            <td>Năm phát hành</td>
+            <td>{data?.yearOfLaunch}</td>
           </tr>
           <tr>
-            <td>Màu sắc</td>
-            <td>{data?.color}</td>
+            <td>Nhóm nước hoa</td>
+            <td>{data?.perfumeGroup}</td>
           </tr>
           <tr>
-            <td>CPU</td>
-            <td>{data?.cpu}</td>
+            <td>Mùa khuyên dùng</td>
+            <td>{data?.season}</td>
           </tr>
           <tr>
-            <td>Chip đồ họa</td>
-            <td>{data?.graphicCard}</td>
+            <td>Danh mục</td>
+            <td>{data?.category?.name}</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>RAM</td>
             <td>{data?.ram}</td>
           </tr>
@@ -49,7 +49,7 @@ const ProductParameters = ({ data }) => {
           <tr>
             <td>Khối lượng</td>
             <td>{data?.weight} kg</td>
-          </tr>
+          </tr> */}
         </thead>
       </table>
     </div>
