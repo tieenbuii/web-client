@@ -4,7 +4,7 @@ import FilterProduct from "../module/filter/FilterProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { action_status } from "../utils/constants/status";
 import { useEffect } from "react";
-import { getBrand, getProductFilter, getCategory } from "../redux/product/productSlice";
+import { getBrand, getProductFilter } from "../redux/product/productSlice";
 import { useState } from "react";
 import Pagination from "react-js-pagination";
 import FilterSort from "../module/filter/FilterSort";
@@ -13,6 +13,7 @@ import FilterPrice from "../module/filter/FilterPrice";
 import Accordion from "../components/accordion/Accordion";
 import Filter from "../components/filter/Filter";
 import { seasonData } from "../api/seasonData";
+import { categoryData } from "../api/categoryData";
 import { capacityData } from "../api/capacityData";
 import BackToTopButton from "../components/backtotop/BackToTopButton";
 import Skeleton from "../components/skeleton/Skeleton";
@@ -20,7 +21,7 @@ import SkeletonItem from "../components/skeleton/SkeletonItem";
 
 const ProductFilterPage = () => {
   const params = queryString.parse(location.search);
-  const { productFilter, statusFilter, totalPageFilter, statusBrand, brand, category, statusCategory } =
+  const { productFilter, statusFilter, totalPageFilter, statusBrand, brand } =
     useSelector((state) => state.product);
   const keyword = localStorage.getItem("keyword");
 
@@ -64,15 +65,6 @@ const ProductFilterPage = () => {
     try {
       if (statusBrand === action_status.IDLE) {
         dispatch(getBrand());
-      }
-    } catch (error) {
-      console.log(error.message);
-    }
-  }, []);
-  useEffect(() => {
-    try {
-      if (statusCategory === action_status.IDLE) {
-        dispatch(getCategory());
       }
     } catch (error) {
       console.log(error.message);
@@ -337,8 +329,8 @@ const ProductFilterPage = () => {
                       })}
                   </Accordion>
                   <Accordion title="Danh mục" className="true">
-                    {category.length > 0 &&
-                      category.map((item) => {
+                    {categoryData.length > 0 &&
+                      categoryData.map((item) => {
                         return (
                           <Filter
                             label={item.name}
@@ -346,7 +338,7 @@ const ProductFilterPage = () => {
                             onChange={(input) => {
                               filterSelect("Categorys", input.checked, item);
                             }}
-                            checked={filter.category.includes(item.id)}
+                            checked={filter.category.includes(item.name)}
                           />
                         );
                       })}
