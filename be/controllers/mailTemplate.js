@@ -31,7 +31,7 @@ const newOrder = (data, domain) => {
     const productName =
       product.product.title.slice(0, 12) +
       "Dung tích" +
-      product.product.capicity +
+      product.product.capacity +
       " ml";
     const productQuantity = "Số lượng: " + product.quantity;
     // const productPrice = product.product.promotion;
