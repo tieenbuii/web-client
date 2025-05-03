@@ -89,7 +89,7 @@ const CartPage = () => {
             </div>
 
             <div className="cart">
-              <div className="information-cart mt-7 pt-3 bg-white text-base rounded-lg w-[98%] max-w-[100vw] sm:w-full overflow-x-auto">
+              <div className="information-cart mt-7 pt-3 bg-white text-base rounded-lg w-[100%] max-w-[100vw] sm:w-full overflow-x-auto">
                 <Table className="w-full">
                   <thead>
                     <tr>

@@ -23,7 +23,7 @@ const Footer = () => {
                 <Link to={"/"} className="text-base hover:text-primary">
                   Tuyển dụng
                 </Link>
-              </li>     
+              </li>
             </ul>
           </div>
 
@@ -103,6 +103,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="bg-primary py-2 text-sm text-center text-white">
+        Copyright 2025 © PINE perfume. All Rights Reserved.
       </div>
     </footer>
   );

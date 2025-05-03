@@ -52,8 +52,8 @@ const FeaturedProducts = ({ data, bg = "", className = "" }) => {
   };
   return (
     <div className={`${className} max-w-[100vw]`}>
-      <div className={`container pt-[60px] md:pt-[40px] lg:pt-0`}>
-        <h2 className="mb-5 text-2xl font-bold text-center">Sản phẩm nổi bật</h2>
+      <div className={`container pt-5`}>
+        <h2 className="mb-5 text-3xl uppercase text-red-500 font-bold text-center">Sản phẩm nổi bật</h2>
         <Swiper
           modules={[Navigation, Pagination, EffectCards]}
           breakpoints={{

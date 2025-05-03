@@ -170,7 +170,7 @@ const UserOrder = () => {
         <>
           {" "}
           <div className="max-w-[100vw] overflow-x-auto">
-            <Table>
+            <Table className="w-full">
               <thead>
                 <tr>
                   <th>

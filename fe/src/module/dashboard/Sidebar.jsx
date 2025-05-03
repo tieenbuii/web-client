@@ -26,6 +26,9 @@ const SidebarStyles = styled.div`
       color: #d72229;
     }
   }
+  .menu-item:last-child {
+    margin-bottom: 0;
+  }
 `;
 const sidebarLinks = [
   {

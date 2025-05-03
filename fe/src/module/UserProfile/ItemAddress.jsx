@@ -224,7 +224,7 @@ const ItemAddress = ({ data, data_key }) => {
           <div className="flex items-center gap-x-5 mb-2">
             <h3 className="font-medium text-base ">{data.name}</h3>
             {data.setDefault && (
-              <div className="px-1 py-1 bg-blue-100 rounded-md font-medium text-sm">
+              <div className="px-2 py-1 bg-yellow-100 rounded-md font-medium text-sm">
                 Mặc định
               </div>
             )}

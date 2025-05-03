@@ -208,7 +208,7 @@ const UserAddress = () => {
       <ModalAdvanced
         visible={showModal}
         onClose={handleCloseModal}
-        bodyClassName="w-[450px] sm:w-[600px] lg:w-[750px] bg-white  rounded-lg relative z-10 content h-[650px]  overflow-x-hidden"
+        bodyClassName="w-[450px] sm:w-[600px] lg:w-[750px] bg-white  rounded-lg relative z-10 content h-[450px]  overflow-x-hidden"
       >
         <div className="overflow-y-auto h-[650px] px-10 py-5 ">
           <h3 className="text-lg font-semibold text-black text-left mb-3">
@@ -327,7 +327,7 @@ const UserAddress = () => {
             </div>
             <div className="flex items-center justify-center gap-x-4 mt-5">
               <button
-                className="p-3 text-base font-medium bg-white text-[#316BFF] rounded-lg border border-solid border-[blue]"
+                className="basis-1/3 text-base font-medium bg-white text-[#316BFF] rounded-lg border border-solid border-[blue]"
                 type="button"
                 onClick={handleCloseModal}
               >
@@ -338,6 +338,7 @@ const UserAddress = () => {
                 type="submit"
                 isLoding={isSubmitting}
                 disable={isSubmitting}
+                className="basis-2/3"
               >
                 Lưu địa chỉ
               </Button>

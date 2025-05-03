@@ -2,7 +2,7 @@ import { FaFacebookF, FaYoutube, FaTiktok } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
-    <section className="bg-white py-16 px-4 md:px-12 lg:px-20">
+    <section className="bg-white py-8 px-4 md:px-12 lg:px-20">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary mb-3 leading-snug">
