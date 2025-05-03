@@ -97,7 +97,7 @@ const SubInformationProduct = ({ data }) => {
         <>
           <div className="flex items-center justify-between option">
             <button
-              className="basis-1/2 py-3 text-center bg-primary text-white text-lg font-medium rounded-md w-[220px] edit mr-4"
+              className="basis-1/2 py-3 text-center bg-primary text-white text-lg font-medium rounded-md edit mr-4"
               type="button"
               onClick={handleBuy}
             >

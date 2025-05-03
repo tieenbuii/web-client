@@ -103,12 +103,12 @@ input::-webkit-inner-spin-button {
 }
 .product-info {
   .option {
-    @media screen and (min-width: 1024px) and (max-width: 1320px) {
+    @media screen and (min-width: 1024px) and (max-width: 1440px) {
       flex-direction: column;
     }
   }
   .edit {
-    @media screen and (min-width: 1024px) and (max-width: 1320px) {
+    @media screen and (min-width: 1024px) and (max-width: 1440px) {
       margin-top: 10px;
       width: 180px;
       font-size: 11px;

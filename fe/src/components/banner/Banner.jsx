@@ -16,7 +16,7 @@ const Banner = () => {
           slidesPerView={1}
           navigation
           effect="fade"
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           className="w-full rounded-lg"
         >

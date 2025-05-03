@@ -29,7 +29,7 @@ const Search = ({ onClickItem, keyword }) => {
   }, [keyword]);
 
   return (
-    <div className="absolute top-14 left-0 rounded-lg w-custom sm:w-customm xl:w-[650px] pr-10 h-[350px] z-10 bg-white shadow-lg overflow-hidden overflow-y-auto">
+    <div className="absolute top-14 left-0 rounded-lg w-custom sm:w-customm xl:w-[650px] h-[350px] z-10 bg-white shadow-lg overflow-hidden overflow-y-auto">
       {statusSearch === action_status.LOADING && (
         <>
           <div className="flex flex-col items-start gap-y-10 p-5">
@@ -84,7 +84,7 @@ const Search = ({ onClickItem, keyword }) => {
                   >
                     {item?.title}
                   </span>
-                  <div className="font-medium text-base text-primary">
+                  {/* <div className="font-medium text-base text-primary">
                     {formatPrice(item?.promotion)}
                   </div>
                   <div className="flex items-center">
@@ -96,7 +96,21 @@ const Search = ({ onClickItem, keyword }) => {
                       {" "}
                       - {item?.percent}%
                     </span>
+                  </div> */}
+                  <div className="font-medium text-base text-primary">
+                    {formatPrice(item?.promotion)}
                   </div>
+
+                  {item?.promotion !== item?.price && (
+                    <div className="flex items-center">
+                      <span className="line-through font-medium text-gray-400 text-sm">
+                        {formatPrice(item?.price)}
+                      </span>
+                      <span className="text-sm font-normal ml-1">
+                        - {item?.percent}%
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
