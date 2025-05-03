@@ -20,7 +20,7 @@ import SkeletonItem from "../components/skeleton/SkeletonItem";
 
 const ProductFilterPage = () => {
   const params = queryString.parse(location.search);
-  const { productFilter, statusFilter, totalPageFilter, statusBrand, brand } =
+  const { productFilter, statusFilter, totalPageFilter, statusBrand, brand, category, statusCategory } =
     useSelector((state) => state.product);
   const keyword = localStorage.getItem("keyword");
 
