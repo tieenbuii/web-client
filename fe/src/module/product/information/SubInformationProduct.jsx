@@ -92,16 +92,16 @@ const SubInformationProduct = ({ data }) => {
       {/* <span className="w-full border-dotted border-2 mb-6"></span> */}
       {data?.inventory > 0 && (
         <>
-          <div className="flex items-center justify-between px-10 option">
+          <div className="flex items-center justify-between option">
             <button
-              className="grow py-3 text-center bg-primary text-white text-lg font-medium rounded-md w-[220px] edit mr-2"
+              className="basis-1/2 py-3 text-center bg-primary text-white text-lg font-medium rounded-md w-[220px] edit mr-4"
               type="button"
               onClick={handleBuy}
             >
               MUA NGAY
             </button>
             <button
-              className="px-3 py-3  text-primary text-lg font-medium rounded-md border-2 border-primary edit"
+              className="basis-1/2 py-3  text-primary text-lg font-medium rounded-md border-2 border-primary edit"
               type="button"
               onClick={handleAddCart}
             >
