@@ -212,25 +212,20 @@ const InformationDetailOrder = () => {
                   </span>
                   {orderId?.status === "Processed" && (
                     <span className="px-2 rounded-lg text-white bg-orange-400 text-base">
-                      Chờ xác nhận
+                      Đang xử lý
                     </span>
                   )}
                   {orderId?.status === "Cancelled" && (
                     <span className="px-2 rounded-lg text-white bg-red-400 text-base">
-                      Đã hủy
+                      Đã hủy đơn
                     </span>
                   )}
                   {orderId?.status === "Success" && (
                     <span className="px-2 rounded-lg text-white bg-green-400 text-base">
-                      Đã giao hàng
+                      Thành công
                     </span>
                   )}
-                  {orderId?.status === "WaitingGoods" && (
-                    <span className="px-2 rounded-lg text-white bg-yellow-400">
-                      Đợi lấy hàng
-                    </span>
-                  )}
-                  {orderId?.status === "Delivery" && (
+                  {orderId?.status === "Waiting Goods" && (
                     <span className="px-2 rounded-lg text-white bg-yellow-400">
                       Đợi lấy hàng
                     </span>

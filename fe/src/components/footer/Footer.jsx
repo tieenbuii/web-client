@@ -7,29 +7,12 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 pb-4">
           <div>
-            <h2 className="text-lg font-semibold mb-4">PINE PERFUME</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link to={"/"} className="text-base hover:text-primary">
-                  Trang chủ
-                </Link>
-              </li>
-              <li>
-                <Link to={"/about"} className="text-base hover:text-primary">
-                  Giới thiệu
-                </Link>
-              </li>
-              <li>
-                <Link to={"/faq"} className="text-base hover:text-primary">
-                  Liên hệ
-                </Link>
-              </li>
-              <li>
-                <Link to={"/"} className="text-base hover:text-primary">
-                  Hỏi đáp
-                </Link>
-              </li>
-            </ul>
+            <h2 className="text-lg font-semibold mb-4">Về chúng tôi</h2>
+            <div className="flex items-center space-x-4">
+              <Link to={"/"}>
+                <img src="/images/logo.png" alt="Logo" />
+              </Link>
+            </div>
           </div>
 
           <div>
