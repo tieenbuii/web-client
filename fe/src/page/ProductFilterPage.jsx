@@ -328,12 +328,27 @@ const ProductFilterPage = () => {
                         );
                       })}
                   </Accordion>
-                  <Accordion title="Danh mục" className="true">
+                  {/* <Accordion title="Danh mục" className="true">
                     {categoryData.length > 0 &&
                       categoryData.map((item) => {
                         return (
                           <Filter
                             label={item.name}
+                            key={item.id}
+                            onChange={(input) => {
+                              filterSelect("Categorys", input.checked, item);
+                            }}
+                            checked={filter.category.includes(item.name)}
+                          />
+                        );
+                      })}
+                  </Accordion> */}
+                    <Accordion title="Mùa khuyên dùng">
+                    {categoryData.length > 0 &&
+                      categoryData.map((item) => {
+                        return (
+                          <Filter
+                            label={`${item.name}`}
                             key={item.id}
                             onChange={(input) => {
                               filterSelect("Categorys", input.checked, item);

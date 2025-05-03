@@ -10,6 +10,9 @@ import SignUpPage from "./page/SignUpPage";
 import VerifyPage from "./page/VerifyPage";
 import ResetPasswordPage from "./page/ResetPasswordPage";
 import ForgotPasswordPage from "./page/ForgotPasswordPage";
+import AboutPage from "./page/AboutPage";
+import ContactPage from "./page/ContactPage";
+import FaqPage from "./page/FaqPage";
 import UserAccount from "./module/UserProfile/UserAccount";
 import UserOrder from "./module/UserProfile/UserOrder";
 import Recharge from "./module/UserProfile/Recharge";
@@ -43,6 +46,9 @@ function App() {
         <PaymentList />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+          <Route path="/contact" element={<ContactPage />}></Route>
+          <Route path="/faq" element={<FaqPage />}></Route>
           <Route
             path="/nearest-location"
             element={<NearestLocationPage />}
