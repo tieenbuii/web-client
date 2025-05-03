@@ -40,7 +40,7 @@ function sortObject(obj) {
 //   let amount = req.body.amount;
 //   let bankCode = req.body.bankCode;
 //   let locale = process.env.vnp_Locale;
-//   let currCode = "VNĐ";
+//   let currCode = "VND";
 //   let vnp_Params = {};
 //   vnp_Params["vnp_Version"] = "2.1.0";
 //   vnp_Params["vnp_Command"] = "pay";
@@ -135,7 +135,7 @@ exports.createPaymentUrl = catchAsync(async (req, res, next) => {
   let amount = req.body.amount;
   let bankCode = req.body.bankCode;
   let locale = process.env.vnp_Locale;
-  let currCode = "VNĐ";
+  let currCode = "VND";
   let vnp_Params = {};
   vnp_Params["vnp_Version"] = "2.1.0";
   vnp_Params["vnp_Command"] = "pay";
@@ -197,13 +197,11 @@ exports.returnPaymentStatus = catchAsync(async (req, res, next) => {
       };
       await Transaction.create(newRecord);
     }
-    res
-      .status(201)
-      .json({
-        message: "success",
-        code: vnp_Params.vnp_ResponseCode,
-        invoice: vnp_Params,
-      });
+    res.status(201).json({
+      message: "success",
+      code: vnp_Params.vnp_ResponseCode,
+      invoice: vnp_Params,
+    });
   } else {
     res.status(201).json({ message: "success", code: "97" });
   }

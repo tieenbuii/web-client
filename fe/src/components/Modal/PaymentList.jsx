@@ -247,7 +247,7 @@ const PaymentList = () => {
                       {value?.payments === "refund" ? "Hoàn tiền" : "Nạp tiền"}
                     </div>
                     <div className="text-xl text-green-400">
-                      {Number(value?.amount).toLocaleString("vi-VN")} VNĐ
+                      {Number(value?.amount).toLocaleString("vi-VN")} VND
                     </div>
                     <div className="text-xs text-gray-400">
                       {format(new Date(value?.createdAt), "HH:mm")}
@@ -276,7 +276,7 @@ const PaymentList = () => {
                   >
                     <div className="text-xl text-black">Mua hàng</div>
                     <div className="text-xl text-green-400">
-                      {Number(value?.totalPrice).toLocaleString("vi-VN")} VNĐ
+                      {Number(value?.totalPrice).toLocaleString("vi-VN")} VND
                     </div>
                     <div className="text-xs text-gray-400">
                       {format(new Date(value?.createdAt), "HH:mm")}

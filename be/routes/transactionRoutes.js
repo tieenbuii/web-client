@@ -30,7 +30,7 @@ router.post("/create_payment_url", function (req, res, next) {
 
   let locale = req.body.language;
   if (!locale) locale = "vn";
-  let currCode = "VNĐ";
+  let currCode = "VND";
 
   let vnp_Params = {};
   vnp_Params["vnp_Version"] = "2.1.0";
