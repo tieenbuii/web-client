@@ -42,18 +42,14 @@ const SubInformationProduct = ({ data }) => {
       >
         {data?.title}
       </span>
-      <div className="flex flex-col md:flex-row md:items-center md:justify-start gap-x-5 mb-4">
-        <span className="text-base text-black mb-4 md:mb-0">
-          Thương hiệu:{" "}
-          <span className="font-medium">{data?.brand?.name}</span>
-        </span>
-        <span className="hidden md:block">|</span>
-        <span className="text-base text-black short-edit">
-          SKU: <span className="font-medium">{data?._id}</span>
-        </span>
+      <div className="text-base text-black short-edit mb-4">
+        SKU: <span className="font-medium">{data?._id}</span>
       </div>
       <div className="text-base text-black mb-4">
-       Danh mục: <span className="font-medium">{data?.category?.name}</span>
+        Thương hiệu: <span className="font-medium">{data?.brand?.name}</span>
+      </div>
+      <div className="text-base text-black mb-4">
+        Danh mục: <span className="font-medium">{data?.category?.name}</span>
       </div>
       <div className="text-base text-black  mb-4">
         Khuyên dùng: <span className="font-medium">Mùa {data?.season}</span>
@@ -95,7 +91,7 @@ const SubInformationProduct = ({ data }) => {
       {/* <span className="w-full border-dotted border-2 mb-6"></span> */}
       {data?.inventory > 0 && (
         <>
-          <div className="flex items-center justify-between option">
+          <div className="flex items-center justify-between">
             <button
               className="basis-1/2 py-3 text-center bg-primary text-white text-lg font-medium rounded-md edit mr-4"
               type="button"
