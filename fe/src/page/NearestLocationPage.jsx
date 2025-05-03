@@ -40,7 +40,7 @@ const NearestLocationPage = () => {
     <>
       {loading && (
         <div className="w-full">
-          <div className="mt-2 md:mt-3 lg:mt-5 px-[8px] md:px-[20px]">
+          <div className="mt-2 md:mt-3 px-[8px] md:px-[20px]">
             <div className="h-[500px] md:h-[600px] lg:h-[700px]">
               <div className="flex justify-center h-full items-center">
                 <LoadingSpinner size="60px" color="#ccc" />
@@ -51,7 +51,7 @@ const NearestLocationPage = () => {
       )}
       {!loading && (
         <div className="w-full">
-          <div className="mt-2 md:mt-3 lg:mt-5 px-[8px] md:px-[20px]">
+          <div className="mt-2 md:mt-3 px-[8px] md:px-[20px]">
             <div className="container ">
               <h1 className="text-xl font-semibold mb-2 cursor-pointer">
                 Địa chỉ gần nhất

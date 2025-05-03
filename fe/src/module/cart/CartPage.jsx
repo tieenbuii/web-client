@@ -50,7 +50,7 @@ const CartPage = () => {
     navigate("/checkout");
   };
   return (
-    <div className="px-[8px] md:px-[20px] mt-2 md:mt-3 lg:mt-5">
+    <div className="px-[8px] md:px-[20px] mt-2 md:mt-3">
       <div className="container">
         <div className="flex items-center">
           <Link
@@ -78,10 +78,10 @@ const CartPage = () => {
 
         {cart?.length > 0 ? (
           <>
-            <div className="flex items-center justify-between">
-              <div className="text-xl font-bold mt-10">Giỏ hàng</div>
+            <div className="flex items-center justify-between mt-2">
+              <div className="text-xl font-bold">Giỏ hàng</div>
               <button
-                className="text-sm font-medium mt-10 border-2 rounded-lg py-2 px-2 border-gray-600"
+                className="text-sm font-medium border-2 rounded-lg py-2 px-2 border-gray-600"
                 onClick={handlePrint}
               >
                 Tải báo giá
@@ -89,11 +89,11 @@ const CartPage = () => {
             </div>
 
             <div className="cart">
-              <div className="information-cart mt-7 bg-white text-base rounded-lg w-[98%] max-w-[100vw] sm:w-full overflow-x-auto">
-                <Table>
+              <div className="information-cart mt-7 pt-3 bg-white text-base rounded-lg w-[98%] max-w-[100vw] sm:w-full overflow-x-auto">
+                <Table className="w-full">
                   <thead>
                     <tr>
-                      <th>Tên sản phẩm</th>
+                      <th>Sản phẩm</th>
                       <th>Đơn giá</th>
                       <th>Số lượng</th>
                       <th>Thành tiền</th>

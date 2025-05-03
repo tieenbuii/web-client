@@ -37,29 +37,29 @@ const SubInformationProduct = ({ data }) => {
   return (
     <div className="product-info flex flex-col p-6 relative">
       <span
-        className="text-xl font-semibold mb-2 line-clamp-2 cursor-pointer"
+        className="text-xl font-semibold mb-2 line-clamp-2"
         title={data?.title}
       >
         {data?.title}
       </span>
-      <div className="flex flex-col md:items-center md:justify-start gap-x-5 mb-4">
-        <span className="text-base text-black">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-start gap-x-5 mb-4">
+        <span className="text-base text-black mb-4 md:mb-0">
           Thương hiệu:{" "}
-          <span className="font-semibold">{data?.brand?.name}</span>
+          <span className="font-medium">{data?.brand?.name}</span>
         </span>
         <span className="hidden md:block">|</span>
         <span className="text-base text-black short-edit">
-          SKU: <span className="font-semibold">{data?._id}</span>
+          SKU: <span className="font-medium">{data?._id}</span>
         </span>
       </div>
-      <div className="text-base text-black font-semibold  mb-4">
-        {data?.category?.name}
+      <div className="text-base text-black mb-4">
+       Danh mục: <span className="font-medium">{data?.category?.name}</span>
       </div>
       <div className="text-base text-black  mb-4">
-        Khuyên dùng: <span className="font-semibold">Mùa {data?.season}</span>
+        Khuyên dùng: <span className="font-medium">Mùa {data?.season}</span>
       </div>
       <div className="text-base text-black  mb-4">
-        Dung tích: <span className="font-semibold">{data?.capacity} ml</span>
+        Dung tích: <span className="font-medium">{data?.capacity} ml</span>
       </div>
       {data?.inventory > 0 && data?.inventory < 5 && (
         <span className="text-tertiary font-medium mb-4">

@@ -198,7 +198,7 @@ const UserAccount = () => {
         {status === action_status.SUCCEEDED && (
           <form className="pb-16" onSubmit={handleSubmit(handleUpdate)}>
             <Field>
-              <Label>Image</Label>
+              <Label>Ảnh đại diện</Label>
               <ImageUpload
                 onChange={handleSelectImage}
                 className="mx-auto"
@@ -209,7 +209,7 @@ const UserAccount = () => {
             </Field>
 
             <Field>
-              <Label htmlFor="fullname">Họ tên</Label>
+              <Label htmlFor="fullname">Họ & tên</Label>
               <Input name="fullname" control={control} type="text"></Input>
               {errors.fullname && (
                 <p className="text-red-500 text-base font-medium">

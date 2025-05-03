@@ -4,12 +4,21 @@ import { formatPrice } from "../../utils/formatPrice";
 const PriceCard = ({ data }) => {
   return (
     <div className="flex flex-col items-end justify-center">
-      <span className="text-base font-semibold">
+      {/* <span className="text-base font-semibold">
         {formatPrice(data.product.promotion)}
       </span>
       <span className="text-sm line-through">
         {formatPrice(data.product.price)}
+      </span> */}
+      <span className="text-base font-semibold text-primary">
+        {formatPrice(data.product.promotion)}
       </span>
+
+      {data.product.promotion !== data.product.price && (
+        <span className="text-sm line-through text-slate-400 ml-2">
+          {formatPrice(data.product.price)}
+        </span>
+      )}
     </div>
   );
 };

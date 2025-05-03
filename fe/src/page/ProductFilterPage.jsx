@@ -203,7 +203,7 @@ const ProductFilterPage = () => {
 
   return (
     <>
-      <div className="px-[8px] md:px-[20px] mt-2 md:mt-3 lg:mt-5">
+      <div className="px-[8px] md:px-[20px] mt-2 md:mt-3">
         <div className="container">
           {" "}
           <div className="flex items-center">
@@ -313,37 +313,7 @@ const ProductFilterPage = () => {
                 {" "}
                 <div className="product-filter w-full  bg-white rounded-lg flex flex-col  text-black">
                   <FilterPrice onChange={handleChangePrice} />
-                  <Accordion title="Thương hiệu" className="true">
-                    {brand.length > 0 &&
-                      brand.map((item) => {
-                        return (
-                          <Filter
-                            label={item.name}
-                            key={item.id}
-                            onChange={(input) => {
-                              filterSelect("Brands", input.checked, item);
-                            }}
-                            checked={filter.brand.includes(item.id)}
-                          />
-                        );
-                      })}
-                  </Accordion>
-                  {/* <Accordion title="Danh mục" className="true">
-                    {categoryData.length > 0 &&
-                      categoryData.map((item) => {
-                        return (
-                          <Filter
-                            label={item.name}
-                            key={item.id}
-                            onChange={(input) => {
-                              filterSelect("Categorys", input.checked, item);
-                            }}
-                            checked={filter.category.includes(item.name)}
-                          />
-                        );
-                      })}
-                  </Accordion> */}
-                  <Accordion title="Danh mục">
+                  <Accordion title="Danh mục" className="true">
                     {categoryData.length > 0 &&
                       categoryData.map((item) => {
                         return (
@@ -358,6 +328,22 @@ const ProductFilterPage = () => {
                         );
                       })}
                   </Accordion>
+                  <Accordion title="Thương hiệu">
+                    {brand.length > 0 &&
+                      brand.map((item) => {
+                        return (
+                          <Filter
+                            label={item.name}
+                            key={item.id}
+                            onChange={(input) => {
+                              filterSelect("Brands", input.checked, item);
+                            }}
+                            checked={filter.brand.includes(item.id)}
+                          />
+                        );
+                      })}
+                  </Accordion>
+                 
                   <Accordion title="Mùa khuyên dùng">
                     {seasonData.length > 0 &&
                       seasonData.map((item) => {

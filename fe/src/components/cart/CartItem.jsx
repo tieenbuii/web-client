@@ -19,22 +19,31 @@ const CartItem = ({ product }) => {
       />
       <div className="flex flex-col items-start text-black">
         <span
-          className=" text-sm line-clamp-2 hover:text-blue-800 font-medium"
+          className=" text-sm line-clamp-2 hover:text-primary font-medium"
           title={product.product.title}
           onClick={handleClick}
         >
           {" "}
           {product.product.title}
         </span>
-        <span className="text-sm text-[#a28faa]">
-          Số lượng: {product.quantity}
+        <span className="text-sm text-black">
+          Số lượng: <span className="text-primary">{product.quantity}</span>
         </span>
-        <span className="text-base font-medium">
+        {/* <span className="text-base font-medium">
           {formatPrice(product.product.promotion)}
         </span>
         <span className="text-sm line-through text-gray-400">
           {formatPrice(product.product.price)}
+        </span> */}
+        <span className="text-base font-medium text-primary">
+          {formatPrice(product.product.promotion)}
         </span>
+
+        {product.product.promotion !== product.product.price && (
+          <span className="text-sm line-through text-slate-400 ml-2">
+            {formatPrice(product.product.price)}
+          </span>
+        )}
       </div>
     </div>
   );

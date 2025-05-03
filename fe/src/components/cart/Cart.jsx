@@ -45,18 +45,18 @@ const Cart = () => {
         {product?.length > 0 &&
           product.map((item) => <CartItem product={item} key={item.id} />)}
         <div className="flex flex-col h-full justify-between">
-          <span className="border-2 border-dotted border-x-gray-500 w-full"></span>
+          <span className="border-2 border-solid border-x-gray-500 w-full"></span>
           <div className="w-full">
             <div className="flex items-center justify-between py-3 text-black">
               <span className="font-normal text-base">
-                Tổng tiền ({length}) sản phẩm
+                Tổng tiền cho {length} sản phẩm
               </span>
-              <span className=" text-lg font-semibold">
+              <span className="text-primary text-lg font-semibold">
                 {formatPrice(total)}
               </span>
             </div>
             <button
-              className="bg-blue-700 mt-2 rounded-lg mx-auto w-full py-2"
+              className="bg-primary mt-2 rounded-lg mx-auto w-full py-2"
               type="button"
               onClick={() => navigate("/cart")}
             >
