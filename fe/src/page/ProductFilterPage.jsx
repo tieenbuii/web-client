@@ -343,7 +343,7 @@ const ProductFilterPage = () => {
                         );
                       })}
                   </Accordion> */}
-                    <Accordion title="Mùa khuyên dùng">
+                  <Accordion title="Danh mục">
                     {categoryData.length > 0 &&
                       categoryData.map((item) => {
                         return (
@@ -353,7 +353,7 @@ const ProductFilterPage = () => {
                             onChange={(input) => {
                               filterSelect("Categorys", input.checked, item);
                             }}
-                            checked={filter.category.includes(item.name)}
+                            checked={filter.category.includes(item.id)}
                           />
                         );
                       })}
