@@ -4,9 +4,22 @@ const newOrder = (data, domain) => {
   const orderId = data._id;
   const orderLink = `${domain}/account/orders/${orderId}`;
   const orderTime = moment(data.createdAt).format("hh:mm DD-MM-YY");
-  const orderStatus = data.status === "Cancelled" ? "đã bị huỷ" : data.status === "Processed" ? "đang chờ xử lý" :data.status === "Waiting Goods" ? "đang chờ lấy hàng" :data.status === "Delivery" ? "đang trên đường giao" : "đã giao thành công"; 
+  const orderStatus =
+    data.status === "Cancelled"
+      ? "đã bị huỷ"
+      : data.status === "Processed"
+      ? "đang chờ xử lý"
+      : data.status === "WaitingGoods"
+      ? "Đợi lấy hàng"
+      : data.status === "Delivery"
+      ? "Đang vận chuyển"
+      : "Đã giao hàng";
   let address = data?.address;
-  const totalPrice = data?.totalPrice;
+  // const totalPrice = data?.totalPrice;
+  const totalPrice = new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  }).format(data?.totalPrice ?? 0);
   let orderAddress = ``;
   address = address.split(",");
   address.forEach((value) => {
@@ -15,9 +28,17 @@ const newOrder = (data, domain) => {
   let listProduct = ``;
   data.cart.forEach((product) => {
     const productImage = product.product.images[0];
-    const productName = product.product.title.slice(0,12)+" Màu " +product.product.color;
-    const productQuantity = product.quantity;
-    const productPrice = product.product.promotion;
+    const productName =
+      product.product.title.slice(0, 12) +
+      "Dung tích" +
+      product.product.capicity +
+      " ml";
+    const productQuantity = "Số lượng: " + product.quantity;
+    // const productPrice = product.product.promotion;
+    const productPrice = new Intl.NumberFormat("vi-VN", {
+      style: "currency",
+      currency: "VND",
+    }).format(product.product.promotion);
     listProduct += `
         <table
           cellpadding="0"
@@ -532,7 +553,7 @@ const newOrder = (data, domain) => {
   <td align="left" style="padding:0;Margin:0;padding-top:10px"><h2 style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:24px;font-style:normal;font-weight:bold;color:#333333;text-align:center"><b>Mọi thắc mắc xin liên hệ</b></h2></td>
   </tr>
   <tr>
-  <td align="center" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#666666;font-size:14px">0855494217</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#666666;font-size:14px">mdr3132003@gmail.com</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#666666;font-size:14px"><br></p></td>
+  <td align="center" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#666666;font-size:14px">0399311529</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#666666;font-size:14px">quangmam14@gmail.com</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#666666;font-size:14px"><br></p></td>
   </tr>
   </table></td>
   </tr>
@@ -576,4 +597,4 @@ const newOrder = (data, domain) => {
   return email;
 };
 
-module.exports = newOrder
+module.exports = newOrder;
