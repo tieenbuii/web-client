@@ -11,7 +11,7 @@ module.exports = {
         origin:
           process.env.NODE_ENV === "development"
             ? ["http://localhost:5173", "http://localhost:3001"]
-            : ["/", "https://pineperfume.onrender.com"],
+            : ["/", "https://web-api-tubd.onrender.com"],
         methods: ["GET", "POST"],
       },
     });
