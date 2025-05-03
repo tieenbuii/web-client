@@ -21,13 +21,13 @@ const Navbar = () => {
   let isLocked = false;
   const hanleMouseOver = () => {
     if (!isLocked) {
-      disableBodyScroll(bodyStyle);
+      // disableBodyScroll(bodyStyle);
       isLocked = true;
     }
   };
   const hanleMouseOut = () => {
     if (isLocked) {
-      enableBodyScroll(bodyStyle);
+      // enableBodyScroll(bodyStyle);
       isLocked = false;
     }
   };

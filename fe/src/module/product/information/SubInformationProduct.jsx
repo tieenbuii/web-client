@@ -94,7 +94,7 @@ const SubInformationProduct = ({ data }) => {
         <>
           <div className="flex items-center justify-between px-10 option">
             <button
-              className="px-8 py-3 bg-primary text-white text-lg font-medium rounded-md w-[220px] edit"
+              className="grow py-3 text-center bg-primary text-white text-lg font-medium rounded-md w-[220px] edit mr-2"
               type="button"
               onClick={handleBuy}
             >

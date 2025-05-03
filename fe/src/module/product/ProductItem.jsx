@@ -123,7 +123,7 @@ const ProductItem = ({
             </button>
           )} */}
           <Link
-            className="sm:p-2 text-primary border border-solid border-primary rounded-lg text-sm font-medium transition-all"
+            className="px-2 py-1 text-primary border border-solid border-primary rounded-lg text-sm font-medium transition-all"
             to={`/product/${product?.id}`}
           >
             Chi tiết

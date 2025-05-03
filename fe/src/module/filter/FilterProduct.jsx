@@ -20,7 +20,7 @@ const FilterProduct = ({ data }) => {
 
   useEffect(() => {
     if (showModal === true) {
-      disableBodyScroll(bodyStyle);
+      // disableBodyScroll(bodyStyle);
     } else {
       enableBodyScroll(bodyStyle);
     }

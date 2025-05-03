@@ -39,7 +39,7 @@ const FeaturedProducts = ({ data, bg = "", className = "" }) => {
 
   useEffect(() => {
     if (showModal === true) {
-      disableBodyScroll(bodyStyle);
+      // disableBodyScroll(bodyStyle);
     }
     if (showModal === false) {
       enableBodyScroll(bodyStyle);

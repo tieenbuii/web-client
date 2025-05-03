@@ -21,20 +21,28 @@ const ProductOrder = ({ data }) => {
                 }}
               />
               <div className="flex flex-col items-start gap-y-2">
-                <span className="mt-5 text-base font-medium">
+                <span className="mt-5 text-base font-medium text-primary">
                   {item?.product.title}
                 </span>
-                <span className="text-sm">SKU: {item?.product?._id}</span>
+                <span className="text-sm text-tertiary">SKU: {item?.product?._id}</span>
               </div>
             </div>
             <div className="flex flex-col self-end sm:self-start items-end mt-5">
-              <span className="text-base font-medium">
+              {/* <span className="text-base font-medium">
                 {formatPrice(item?.product?.promotion)}
               </span>
               <span className="text-sm line-through">
                 {formatPrice(item?.product?.price)}
+              </span> */}
+              <span className="text-base font-medium">
+                {formatPrice(item?.product?.promotion)}
               </span>
-              <span className="text-base font-medium">X{item?.quantity}</span>
+              {item?.product?.promotion !== item?.product?.price && (
+                <span className="text-sm line-through text-slate-400 ml-2">
+                  {formatPrice(item?.product?.price)}
+                </span>
+              )}
+              <span className="text-base font-medium">Số lượng: {item?.quantity}</span>
             </div>
           </div>
         ))}

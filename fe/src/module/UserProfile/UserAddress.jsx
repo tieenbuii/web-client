@@ -141,7 +141,7 @@ const UserAddress = () => {
       enableBodyScroll(bodyStyle);
       isLocked = false;
     } else {
-      disableBodyScroll(bodyStyle);
+      // disableBodyScroll(bodyStyle);
       isLocked = true;
     }
   }, [showModal]);

@@ -113,7 +113,7 @@ const PaymentList = () => {
 
   useEffect(() => {
     if (showPayment === true) {
-      disableBodyScroll(bodyStyle);
+      // disableBodyScroll(bodyStyle);
     } else {
       enableBodyScroll(bodyStyle);
     }
@@ -121,7 +121,7 @@ const PaymentList = () => {
 
   useEffect(() => {
     if (showPayment === true) {
-      disableBodyScroll(bodyStyle);
+      // disableBodyScroll(bodyStyle);
     } else {
       enableBodyScroll(bodyStyle);
     }

@@ -86,7 +86,7 @@ const ItemAddress = ({ data, data_key }) => {
       ward: getValues("ward"),
       address: data.detail,
     });
-    disableBodyScroll(bodyStyle);
+    // disableBodyScroll(bodyStyle);
     isLocked = true;
   };
 
