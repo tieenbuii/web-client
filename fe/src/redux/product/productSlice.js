@@ -8,6 +8,7 @@ const initialState = {
   statusId: action_status.IDLE,
   statusFilter: action_status.IDLE,
   statusBrand: action_status.IDLE,
+  statusCategory: action_status.IDLE,
   statusSearch: action_status.IDLE,
   statusProductBrand: action_status.IDLE,
   totalPage: null,
@@ -46,6 +47,10 @@ export const getProductBrand = createAsyncThunk(
     return response.data;
   }
 );
+export const getCategory = createAsyncThunk("user/getCategory", async () => {
+  const response = await productApi.getCategory(); // Đảm bảo bạn có hàm này trong productApi
+  return response.data;
+});
 
 export const getBrand = createAsyncThunk("user/getBrand", async (payload) => {
   const response = await productApi.getBrand();
@@ -135,6 +140,17 @@ const productSlice = createSlice({
     [getProductBrand.rejected]: (state, action) => {
       state.statusProductBrand = action_status.FAILED;
     },
+    [getCategory.pending]: (state, action) => {
+      state.statusCategory = action_status.LOADING;
+    },
+    [getCategory.fulfilled]: (state, action) => {
+      state.statusCategory = action_status.SUCCEEDED;
+      state.category = action.payload.data;
+    },
+    [getCategory.rejected]: (state, action) => {
+      state.statusCategory = action_status.FAILED;
+    },
+    
   },
 });
 const { actions, reducer } = productSlice;
