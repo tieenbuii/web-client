@@ -90,7 +90,7 @@ export default function ContactPage() {
               />
               <button
                 type="submit"
-                className="bg-hero-gradient text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition"
+                className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition"
               >
                 Gửi liên hệ
               </button>
