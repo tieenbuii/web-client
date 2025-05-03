@@ -210,7 +210,7 @@ const ProductFilterPage = () => {
           <div className="flex items-center">
             <Link
               to="/"
-              className=" text-base text-[#898889] flex items-center font-medium"
+              className=" text-base text-[#000] hover:text-primary flex items-center font-medium"
             >
               Trang chủ
               <svg
@@ -228,7 +228,7 @@ const ProductFilterPage = () => {
                 />
               </svg>
             </Link>
-            <span className="text-base text-[#898889] font-medium">
+            <span className="text-base text-primary font-medium">
               Nước hoa chính hãng
             </span>
           </div>

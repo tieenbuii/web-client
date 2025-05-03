@@ -198,7 +198,7 @@ const SignUpPage = () => {
           <span className="text-black text-base">
             Bạn đã có tài khoản? &nbsp;
           </span>
-          <Link to="/sign-in" className="text-lg text-[#1DC071] font-semibold">
+          <Link to="/sign-in" className="text-lg text-[#d72229] font-semibold">
             Đăng nhập
           </Link>
         </div>

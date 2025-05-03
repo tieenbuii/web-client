@@ -45,7 +45,7 @@ const DropdownStyles = styled.div`
   }
   a:hover {
     background: #f1fbf7;
-    color: #1dc071;
+    color: #d72229;
   }
   @media (min-width: 768px) {
     right: -28px;
@@ -119,7 +119,7 @@ const Dropdown = () => {
             />
           </svg>
 
-          <span className="text-base font-medium">Quản lý đơn hàng</span>
+          <span className="text-base font-medium">Đơn hàng của bạn</span>
         </div>
       </NavLink>
 
@@ -145,11 +145,11 @@ const Dropdown = () => {
             />
           </svg>
 
-          <span className="text-base font-medium">Sổ địa chỉ</span>
+          <span className="text-base font-medium">Địa chỉ giao hàng</span>
         </div>
       </NavLink>
 
-      <NavLink to="/account/chat" end>
+      {/* <NavLink to="/account/chat" end>
         <div className="flex items-center gap-x-4 border-b-2 border-solid px-3 py-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ const Dropdown = () => {
 
           <span className="text-base font-medium">Chat</span>
         </div>
-      </NavLink>
+      </NavLink> */}
 
       <NavLink to="/account/reset-password" end>
         <div className="flex items-center gap-x-4 border-b-2 border-solid px-3 py-2">

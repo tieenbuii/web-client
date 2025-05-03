@@ -16,7 +16,7 @@ import PageNotFound from "../../page/NotFoundPage";
 import ProductListHome from "../../module/product/ProductListHome";
 import Skeleton from "../../components/skeleton/Skeleton";
 import SkeletonItem from "../../components/skeleton/SkeletonItem";
-import Comment from "../../components/comment/Comment";
+// import Comment from "../../components/comment/Comment";
 
 const ProductInformation = () => {
   const params = useParams();
@@ -134,7 +134,7 @@ const ProductInformation = () => {
             <div className="flex items-center">
               <Link
                 to="/"
-                className=" text-base text-[#898889] flex items-center font-medium min-w-[120px]"
+                className=" text-base text-[#000] hover:text-primary flex items-center font-medium min-w-[120px]"
               >
                 Trang chủ
                 <svg
@@ -152,7 +152,7 @@ const ProductInformation = () => {
                   />
                 </svg>
               </Link>
-              <span className="text-base text-[#898889] font-medium truncate">
+              <span className="text-base text-primary font-medium truncate">
                 {productId?.title}
               </span>
             </div>
@@ -166,7 +166,7 @@ const ProductInformation = () => {
             </div>
 
             <Feedback id={productId?._id} data={productId} />
-            <Comment id={params?.id} />
+            {/* <Comment id={params?.id} /> */}
 
             <BackToTopButton />
           </div>

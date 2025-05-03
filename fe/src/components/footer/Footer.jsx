@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="text-black bg-white mt-5 px-[8px] md:px-[20px]">
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 pb-4">
-          <div>
+          {/* <div>
             <h2 className="text-lg font-semibold mb-4">Tải ứng dụng</h2>
             <div className="flex items-center space-x-4">
               <Link to={"/"}>
@@ -14,6 +14,29 @@ const Footer = () => {
               </Link>
               <Link to={"/"}>
                 <img src="/images/appstore.png" alt="App Store" />
+              </Link>
+            </div>
+          </div> */}
+            <div className="flex flex-col items-center md:items-start">
+            <span className="text-lg font-semibold">PINE perfume</span>
+            <div className="mt-5 flex flex-col items-center md:items-start">
+              <Link
+                to="/about"
+                className="pb-3 text-base hover:text-primary"
+              >
+                <span>Giới thiệu</span>
+              </Link>
+              <Link
+                to="/contact"
+                className="pb-3 text-base hover:text-primary"
+              >
+                <span>Liên hệ</span>
+              </Link>
+              <Link
+                to="/product"
+                className="pb-3 text-base hover:text-primary"
+              >
+                <span>Sản phẩm</span>
               </Link>
             </div>
           </div>

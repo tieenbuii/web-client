@@ -63,14 +63,14 @@ const UserOrder = () => {
     <div>
       <div className="flex items-center justify-between  flex-col xl:flex-row">
         {/* <DashboardHeading
-          title="Quản lý đơn hàng"
+          title="Đơn hàng của bạn"
           className="xl:px-5 xl:py-5"
         ></DashboardHeading> */}
         {/* <div className="flex items-center gap-x-3 pb-5">
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
               state === "All" || state === undefined
-                ? "bg-blue-500 text-white"
+                ? "bg-primary text-white"
                 : ""
             }`}
             value="All"
@@ -80,7 +80,7 @@ const UserOrder = () => {
           </button>
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
-              state === "Processed" ? "bg-blue-500 text-white" : ""
+              state === "Processed" ? "bg-primary text-white" : ""
             }`}
             value="Processed"
             onClick={handleClick}
@@ -89,7 +89,7 @@ const UserOrder = () => {
           </button>
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4  text-base font-medium rounded-lg border border-gray-300 ${
-              state === "Success" ? "bg-blue-500 text-white" : ""
+              state === "Success" ? "bg-primary text-white" : ""
             }`}
             value="Success"
             onClick={handleClick}
@@ -98,7 +98,7 @@ const UserOrder = () => {
           </button>
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300  ${
-              state === "Cancelled" ? "bg-blue-500 text-white" : ""
+              state === "Cancelled" ? "bg-primary text-white" : ""
             }`}
             value="Cancelled"
             onClick={handleClick}

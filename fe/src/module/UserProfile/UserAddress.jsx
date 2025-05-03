@@ -178,7 +178,7 @@ const UserAddress = () => {
   return (
     <div>
       <DashboardHeading
-        title="Sổ địa chỉ"
+        title="Địa chỉ giao hàng"
         className="px-5 py-5"
       ></DashboardHeading>
 

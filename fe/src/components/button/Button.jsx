@@ -26,7 +26,7 @@ const ButtonStyles = styled.button`
   ${(props) =>
     props.bg === "secondary" &&
     css`
-      color: #1dc071;
+      color: #d72229;
       background-color: white;
     `};
 
@@ -34,7 +34,7 @@ const ButtonStyles = styled.button`
     props.bg === "primary" &&
     css`
       color: white;
-      background-image: linear-gradient(to right bottom, #1dc071, #a4d96c);
+      background-image: linear-gradient(to right bottom, #e21c34, #500b28);
     `};
 
   &:disabled {

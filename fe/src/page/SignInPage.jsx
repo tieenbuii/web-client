@@ -166,7 +166,7 @@ const SignInPage = () => {
 
             <Link
               to="/sign-up"
-              className="text-lg text-[#1DC071] font-semibold transition-colors hover:text-[#FFC107] sm:text-base"
+              className="text-lg text-[#d72229] font-semibold transition-colors hover:text-[#FFC107] sm:text-base"
             >
               Đăng ký
             </Link>
@@ -174,7 +174,7 @@ const SignInPage = () => {
 
           <Link
             to="/forgot-password"
-            className="text-lg text-[#1DC071] font-semibold transition-colors hover:text-[#FFC107] sm:text-base"
+            className="text-lg text-[#d72229] font-semibold transition-colors hover:text-[#FFC107] sm:text-base"
           >
             Quên mật khẩu
           </Link>
@@ -193,7 +193,7 @@ const SignInPage = () => {
         >
           Đăng nhập
         </Button>
-        <div className="w-[250px] mx-auto">
+        {/* <div className="w-[250px] mx-auto">
           <GoogleButton
             type="light"
             style={{
@@ -205,7 +205,7 @@ const SignInPage = () => {
             }}
             onClick={handleLogInWithGoogle}
           />
-        </div>
+        </div> */}
       </form>
     </AuthenticationPage>
   );

@@ -23,7 +23,7 @@ const SidebarStyles = styled.div`
     &.active,
     &:hover {
       background: #f1fbf7;
-      color: #1dc071;
+      color: #d72229;
     }
   }
 `;

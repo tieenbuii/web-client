@@ -1,4 +1,5 @@
-* Các Chức Năng Đã Hoàn Thành:
+- Các Chức Năng Đã Hoàn Thành:
+
 1. Đăng Nhập và Đăng Ký:
 
 Đăng nhập vào tài khoản hiện có hoặc đăng ký tài khoản mới để trải nghiệm đầy đủ chức năng.
@@ -31,7 +32,7 @@ Hoàn tất quá trình mua sắm và thanh toán đơn hàng của bạn.
 
 Thêm, sửa, xóa địa chỉ giao hàng để đảm bảo nhận hàng đúng địa chỉ.
 
-10. Quản Lý Đơn Hàng:
+10. Đơn hàng của bạn:
 
 Xem và theo dõi trạng thái của các đơn hàng đã đặt.
 
@@ -61,8 +62,8 @@ Khi người dùng đã thanh toán đơn hàng và đơn hàng bị huỷ sẽ 
 
 17. Đăng xuất tài khoản.
 
+- Giao diện các trang chính:
 
-* Giao diện các trang chính:
 1. Trang chủ
 2. Trang đăng ký
 3. Trang đăng nhập
@@ -74,8 +75,8 @@ Khi người dùng đã thanh toán đơn hàng và đơn hàng bị huỷ sẽ 
 9. Trang Lọc sản phẩm
 10. Trang quản lý thông tin cá nhân
 11. Trang đổi mật khẩu
-12. Trang quản lý đơn hàng
+12. Trang Đơn hàng của bạn
 13. Trang chi tiết đơn hàng
-14. Trang quản lý sổ địa chỉ
+14. Trang quản lý Địa chỉ giao hàng
 15. Trang nạp tiền
 16. Trang nhắn tin với admin

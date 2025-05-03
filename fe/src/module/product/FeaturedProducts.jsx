@@ -13,7 +13,7 @@ import { useState } from "react";
 import { formatPrice } from "../../utils/formatPrice";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-const ProductListHome = ({ data, bg = "", className = "" }) => {
+const FeaturedProducts = ({ data, bg = "", className = "" }) => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const bodyStyle = document.body.style;
@@ -52,17 +52,7 @@ const ProductListHome = ({ data, bg = "", className = "" }) => {
   };
   return (
     <div className={`${className} max-w-[100vw]`}>
-      <div
-        className={`container pt-[60px] md:pt-[40px] lg:pt-0 ${
-          bg === "bg1" ? 'bg-[url("../images/bg-Nước hoa.png")] h-[460px]' : ""
-        }
-        ${
-          bg === "bg2"
-            ? 'bg-[url("../images/bg-Nước hoa-1.png")] h-[460px]'
-            : ""
-        }
-           bg-no-repeat max-w-full bg-cover bg-center rounded-lg relative z-20`}
-      >
+      <div className={`container pt-[60px] md:pt-[40px] lg:pt-0`}>
         <Swiper
           modules={[Navigation, Pagination, EffectCards]}
           breakpoints={{
@@ -293,4 +283,4 @@ const ProductListHome = ({ data, bg = "", className = "" }) => {
   );
 };
 
-export default ProductListHome;
+export default FeaturedProducts;

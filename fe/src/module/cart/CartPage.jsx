@@ -55,7 +55,7 @@ const CartPage = () => {
         <div className="flex items-center">
           <Link
             to="/"
-            className=" text-base text-[#898889] flex items-center font-medium"
+            className=" text-base text-[#000] hover:text-primary flex items-center font-medium"
           >
             Trang chủ
             <svg
@@ -73,7 +73,7 @@ const CartPage = () => {
               />
             </svg>
           </Link>
-          <span className="text-base text-[#898889] font-medium">Giỏ hàng</span>
+          <span className="text-base text-primary font-medium">Giỏ hàng</span>
         </div>
 
         {cart?.length > 0 ? (

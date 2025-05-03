@@ -12,7 +12,7 @@ const DashboardStyles = styled.div`
       font-weight: bold;
       font-size: 24px;
       margin-bottom: 40px;
-      color: #1dc071;
+      color: #d72229;
       letter-spacing: 1px;
     }
     &-main {
