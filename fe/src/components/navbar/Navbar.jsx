@@ -104,7 +104,7 @@ const Navbar = () => {
   return (
     <nav className="max-w-full bg-white h-[100px] md:h-[120px] sticky z-[1001] shadow-md transition-all top-0 text-white -translate-y-0.5">
       <div className="container flex items-center h-[70%] justify-between px-[8px] md:px-[20px] py-3">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-4 md:gap-2">
           <div className="flex items-center justify-center gap-2">
             <Link to="/" className="flex items-center">
               <div className="w-auto md:hidden h-[40px] object-cover">
@@ -117,7 +117,6 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
-
           <Link to="/" className="flex items-center">
             <div className="hidden md:block w-auto md:h-[35px] lg:h-[48px] object-cover">
               <img
