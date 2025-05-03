@@ -278,28 +278,28 @@ const PaymentBank = () => {
         <span className="text-2xl font-semibold mx-auto">
           Thông tin đơn hàng
         </span>
-        <div className="flex flex-col w-[1000px] mx-auto mt-16 gap-y-3">
-          <div className="flex items-center justify-between">
+        <div className="flex flex-col w-full md:w-[1000px] mx-auto mt-16 gap-y-3">
+          <div className="w-[100%] flex items-center justify-between">
             <span className="text-xl font-medium">Nguời nhận:</span>
             <span className="text-xl font-medium">{dataOrder?.receiver}</span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="w-[100%] flex items-center justify-between">
             <span className="text-xl font-medium">Số điện thoại:</span>
             <span className="text-xl font-medium">{dataOrder?.phone}</span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="w-[100%] flex items-center justify-between">
             <span className="text-xl font-medium">Địa chỉ nhận hàng:</span>
             <span className="text-xl font-medium">{dataOrder?.address}</span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="w-[100%] flex items-center justify-between">
             <span className="text-xl font-medium">Phương thức thanh toán:</span>
             <span className="text-xl font-medium">{dataOrder?.payments}</span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="w-[100%] flex items-center justify-between">
             <span className="text-xl font-medium">
               Tổng số tiền cần thanh toán
             </span>
-            <span className="text-2xl font-medium text-[#009245]">
+            <span className="text-2xl font-medium text-primary">
               {formatPrice(dataOrder?.totalPrice)}
             </span>
           </div>
@@ -339,7 +339,7 @@ const PaymentBank = () => {
       <div className="mx-auto w-[800px] mt-10">
         <button
           onClick={handleVNPayPayment}
-          className="w-full bg-primary text-white py-3 rounded-full hover:bg-[#007a3d] transition duration-300"
+          className="w-full text-xl bg-primary text-white py-3 rounded-full hover:bg-yellow-500 transition duration-300"
         >
           Thanh toán qua VNPAY
         </button>

@@ -18,7 +18,7 @@ const newOrder = (data, domain) => {
   // const totalPrice = data?.totalPrice;
   const totalPrice = new Intl.NumberFormat("vi-VN", {
     style: "currency",
-    currency: "VND",
+    currency: "VNĐ",
   }).format(data?.totalPrice ?? 0);
   let orderAddress = ``;
   address = address.split(",");
@@ -37,7 +37,7 @@ const newOrder = (data, domain) => {
     // const productPrice = product.product.promotion;
     const productPrice = new Intl.NumberFormat("vi-VN", {
       style: "currency",
-      currency: "VND",
+      currency: "VNĐ",
     }).format(product.product.promotion);
     listProduct += `
         <table

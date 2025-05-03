@@ -126,7 +126,7 @@ const ProductItem = ({
             className="sm:p-2 text-primary border border-solid border-primary rounded-lg text-sm font-medium transition-all"
             to={`/product/${product?.id}`}
           >
-            Xem chi tiết
+            Chi tiết
           </Link>
         </div>
       </div>
