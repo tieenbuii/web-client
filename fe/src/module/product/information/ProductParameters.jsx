@@ -11,7 +11,11 @@ const ProductParameters = ({ data }) => {
             <td>{data?.brand?.name}</td>
           </tr>
           <tr>
-            <td>Năm phát hành</td>
+            <td>Xuất xứ</td>
+            <td>{data?.origin}</td>
+          </tr>
+          <tr>
+            <td>Năm ra mắt</td>
             <td>{data?.yearOfLaunch}</td>
           </tr>
           <tr>
@@ -19,12 +23,8 @@ const ProductParameters = ({ data }) => {
             <td>{data?.perfumeGroup}</td>
           </tr>
           <tr>
-            <td>Mùa khuyên dùng</td>
-            <td>{data?.season}</td>
-          </tr>
-          <tr>
-            <td>Danh mục</td>
-            <td>{data?.category?.name}</td>
+            <td>Khuyên dùng</td>
+            <td>Mùa {data?.season}</td>
           </tr>
           {/* <tr>
             <td>RAM</td>

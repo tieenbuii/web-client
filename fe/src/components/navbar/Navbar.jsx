@@ -107,7 +107,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center gap-4 md:gap-2">
           <div className="flex items-center justify-center gap-2">
             <Link to="/" className="flex items-center">
-              <div className="w-auto md:hidden h-[30px] object-cover">
+              <div className="w-40 md:hidden h-auto object-cover">
                 <img
                   src="/images/logo-mobie.png"
                   alt="logo"
@@ -118,7 +118,7 @@ const Navbar = () => {
             </Link>
           </div>
           <Link to="/" className="flex items-center">
-            <div className="hidden md:block w-auto md:h-[35px] lg:h-[48px] object-cover">
+            <div className="hidden md:block w-auto md:h-[48px] object-cover">
               <img
                 src="/images/logo.png"
                 alt="logo"

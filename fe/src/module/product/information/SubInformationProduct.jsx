@@ -42,18 +42,21 @@ const SubInformationProduct = ({ data }) => {
       >
         {data?.title}
       </span>
-      <div className="flex items-center justify-start gap-x-5 mb-4">
+      <div className="flex flex-col md:items-center md:justify-start gap-x-5 mb-4">
         <span className="text-base text-black">
           Thương hiệu:{" "}
           <span className="font-semibold">{data?.brand?.name}</span>
         </span>
-        <span>|</span>
+        <span className="hidden md:block">|</span>
         <span className="text-base text-black short-edit">
           SKU: <span className="font-semibold">{data?._id}</span>
         </span>
       </div>
+      <div className="text-base text-black font-semibold  mb-4">
+        {data?.category?.name}
+      </div>
       <div className="text-base text-black  mb-4">
-        Mùa khuyên dùng: <span className="font-semibold">{data?.season}</span>
+        Khuyên dùng: <span className="font-semibold">Mùa {data?.season}</span>
       </div>
       <div className="text-base text-black  mb-4">
         Dung tích: <span className="font-semibold">{data?.capacity} ml</span>
