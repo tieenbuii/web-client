@@ -62,10 +62,10 @@ const UserOrder = () => {
   return (
     <div>
       <div className="flex items-center justify-between  flex-col xl:flex-row">
-        <DashboardHeading
+        {/* <DashboardHeading
           title="Đơn hàng của bạn"
           className="xl:px-5 xl:py-5"
-        ></DashboardHeading>
+        ></DashboardHeading> */}
         {/* <div className="flex items-center gap-x-3 pb-5">
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
@@ -106,7 +106,7 @@ const UserOrder = () => {
             Đã hủy đơn
           </button>
         </div> */}
-        <div className="flex items-center gap-x-3 mt-5 mb-5">
+        <div className="flex items-center gap-x-3 mb-5">
           <button
             className={`flex items-center gap-x-3 cursor-pointer py-2 px-4 text-base font-medium rounded-lg border border-gray-300 ${
               state === "All" || state === undefined
