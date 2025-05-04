@@ -16,8 +16,12 @@ const Banner = () => {
           slidesPerView={1}
           navigation
           effect="fade"
+          loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
+          pagination={{
+            clickable: true,
+            el: '.custom-swiper-pagination',
+          }}
           className="w-full rounded-lg"
         >
           {bannerData.length > 0 &&

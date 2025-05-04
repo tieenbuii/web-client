@@ -53,7 +53,9 @@ const FeaturedProducts = ({ data, bg = "", className = "" }) => {
   return (
     <div className={`${className} max-w-[100vw]`}>
       <div className={`container pt-5`}>
-        <h2 className="mb-5 text-3xl uppercase text-red-500 font-bold text-center">Sản phẩm nổi bật</h2>
+        <h2 className="mb-5 text-3xl uppercase text-red-500 font-bold text-center">
+          Sản phẩm nổi bật
+        </h2>
         <Swiper
           modules={[Navigation, Pagination, EffectCards]}
           breakpoints={{
@@ -85,6 +87,7 @@ const FeaturedProducts = ({ data, bg = "", className = "" }) => {
                   selected={selectedItems}
                   addToCompare={addToCompare}
                   removeFromCompare={removeFromCompare}
+                  className="border-2 border-solid border-[#f6f6f6]"
                 />
               </SwiperSlide>
             ))}
