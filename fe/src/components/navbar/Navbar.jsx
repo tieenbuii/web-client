@@ -256,30 +256,30 @@ const Navbar = () => {
         </div>
       </div>
       <div className="w-full bg-primary flex text-white items-center justify-center h-[30%]">
-        <Link to="/" className="py-2 px-4 hover:text-secondary transition-all">
+        <Link to="/" className="text-sm md:text-[16px] py-2 px-4 hover:text-secondary transition-all">
           Trang chủ
         </Link>
         <Link
           to="/about"
-          className="py-2 px-4 hover:text-secondary transition-all"
+          className="text-sm md:text-[16px] py-2 px-4 hover:text-secondary transition-all"
         >
           Giới thiệu
         </Link>
         <Link
           to="/product"
-          className="py-2 px-4 hover:text-secondary transition-all"
+          className="text-sm md:text-[16px] py-2 px-4 hover:text-secondary transition-all"
         >
           Sản phẩm
         </Link>
         <Link
           to="/contact"
-          className="py-2 px-4 hover:text-secondary transition-all"
+          className="text-sm md:text-[16px] py-2 px-4 hover:text-secondary transition-all"
         >
           Liên hệ
         </Link>
         <Link
           to="/faq"
-          className="py-2 px-4 hover:text-secondary transition-all"
+          className="text-sm md:text-[16px] py-2 px-4 hover:text-secondary transition-all"
         >
           Hỏi đáp
         </Link>

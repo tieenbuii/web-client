@@ -33,7 +33,7 @@ const PaymentCash = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-[200px] h-[200px] text-orange-400"
+          className="w-[100px] h-[100px] md:w-[200px] md:h-[200px] text-primary"
         >
           <path
             strokeLinecap="round"
@@ -45,8 +45,8 @@ const PaymentCash = () => {
         <span className="mt-5 text-xl">
           Vui lòng chờ trong giây lát hoặc liên hệ bộ phận quản trị viên
         </span>
-        <div className="mt-10 p-5 flex flex-col w-[550px]">
-          <div className="flex items-center text-xl justify-between ">
+        <div className="mt-10 p-5 flex flex-col w-full md:w-[550px]">
+          <div className="flex items-center text-xl justify-between w-[80%] mx-auto">
             <span>Mã đơn hàng:</span>
             <span>{data?.id}</span>
           </div>
@@ -60,7 +60,7 @@ const PaymentCash = () => {
           </div>
         </div>
         <button
-          className="mt-5 py-3 px-4 text-white bg-[#d72229] rounded-lg "
+          className="mt-5 py-3 text-lg px-4 text-white bg-[#d72229] rounded-lg "
           onClick={() => navigate("/account/orders")}
         >
           Xem chi tiết đơn hàng

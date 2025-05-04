@@ -35,7 +35,7 @@ export default function ContactPage() {
               <h3 className="text-lg font-semibold text-gray-700 mb-1">
                 📧 Email
               </h3>
-              <p className="text-gray-600">pineperfume@gmail.com</p>
+              <p className="text-gray-600">pineperfumenuochoa@gmail.com</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-700 mb-1">
@@ -44,7 +44,7 @@ export default function ContactPage() {
               <div className="flex space-x-4 mt-2 text-2xl">
                 <a
                   href="#"
-                  className="text-primary hover:text-blue-800"
+                  className="text-blue-400 hover:text-blue-800"
                   aria-label="Facebook"
                 >
                   <FaFacebookF />
@@ -76,17 +76,17 @@ export default function ContactPage() {
               <input
                 type="text"
                 placeholder="Họ và tên"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800"
               />
               <input
                 type="email"
                 placeholder="Email của bạn"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800"
               />
               <textarea
                 placeholder="Nội dung liên hệ"
                 rows="4"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800"
               />
               <button
                 type="submit"

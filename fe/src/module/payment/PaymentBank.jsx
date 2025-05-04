@@ -336,7 +336,7 @@ const PaymentBank = () => {
           </div>
         </div>
       </div> */}
-      <div className="mx-auto w-full px-4  mt-10">
+      <div className="mx-auto w-full md:w-50% px-4  mt-10">
         <button
           onClick={handleVNPayPayment}
           className="w-full text-xl bg-primary text-white py-3 rounded-full hover:bg-yellow-500 transition duration-300"
