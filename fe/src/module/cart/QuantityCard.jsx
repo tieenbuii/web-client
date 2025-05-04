@@ -62,19 +62,13 @@ const QuantityCard = ({ data }) => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
           </svg>
         </span>
-        {/* <input
-          type="number"
-          value={data.quantity}
-          readOnly
-          className="p-1 bg-[#f8f8fc] w-[50px] text-center count"
-        ></input> */}
         <input
           type="number"
           value={data.quantity}
-          onChange={handleQuantityChange} // Thêm hàm này để xử lý thay đổi
+          // readOnly
           min={1}
           className="p-1 bg-[#f8f8fc] w-[50px] text-center count"
-        />
+        ></input>
         <span
           className="inline-block p-2 bg-[#f8f8fc] cursor-pointer"
           onClick={() =>
