@@ -46,7 +46,7 @@ const PaymentCash = () => {
           Vui lòng chờ trong giây lát hoặc liên hệ bộ phận quản trị viên
         </span>
         <div className="mt-10 p-5 flex flex-col w-full md:w-[550px]">
-          <div className="flex items-center text-xl justify-between w-[80%] mx-auto">
+          <div className="flex items-center text-xl justify-between">
             <span>Mã đơn hàng:</span>
             <span>{data?.id}</span>
           </div>
