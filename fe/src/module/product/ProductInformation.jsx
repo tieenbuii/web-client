@@ -71,11 +71,11 @@ const ProductInformation = () => {
                 <div className="flex flex-col gap-y-3">
                   <Skeleton className="w-[300px] h-[300px] rounded-md" />
                   <div className="flex items-center gap-x-3 ">
-                    <Skeleton className="w-[50px] h-[50px] rounded-md" />
-                    <Skeleton className="w-[50px] h-[50px] rounded-md" />
-                    <Skeleton className="w-[50px] h-[50px] rounded-md" />
-                    <Skeleton className="w-[50px] h-[50px] rounded-md" />
-                    <Skeleton className="w-[50px] h-[50px] rounded-md" />
+                    <Skeleton className="w-[60px] h-[60px] rounded-md" />
+                    <Skeleton className="w-[60px] h-[60px] rounded-md" />
+                    <Skeleton className="w-[60px] h-[60px] rounded-md" />
+                    <Skeleton className="w-[60px] h-[60px] rounded-md" />
+                    {/* <Skeleton className="w-[50px] h-[50px] rounded-md" /> */}
                   </div>
                 </div>
                 <div className="product-info flex flex-col p-2">

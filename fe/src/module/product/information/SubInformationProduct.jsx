@@ -49,7 +49,7 @@ const SubInformationProduct = ({ data }) => {
         Thương hiệu: <span className="font-medium">{data?.brand?.name}</span>
       </div>
       <div className="text-base text-black mb-4">
-        Danh mục: <span className="font-medium">{data?.category?.name}</span>
+        Loại sản phẩm: <span className="font-medium">{data?.category?.name}</span>
       </div>
       <div className="text-base text-black  mb-4">
         Khuyên dùng: <span className="font-medium">Mùa {data?.season}</span>

@@ -17,7 +17,7 @@ const InformationOrder = ({ data }) => {
       />
       <div className="flex flex-col justify-start items-start">
         <span
-          className="text-sm line-clamp-2 hover:text-blue-800 cursor-pointer font-medium"
+          className="text-sm line-clamp-2 hover:text-primary cursor-pointer font-medium"
           onClick={handleClick}
           title={data.product.title}
         >

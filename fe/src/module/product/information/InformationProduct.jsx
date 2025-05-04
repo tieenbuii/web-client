@@ -35,7 +35,7 @@ const InformationProduct = ({ data }) => {
           onSwiper={setActiveThumb}
           loop={true}
           spaceBetween={10}
-          slidesPerView={5}
+          slidesPerView={4}
           modules={[Navigation, Thumbs]}
           className="product-images-slider-thumbs"
         >

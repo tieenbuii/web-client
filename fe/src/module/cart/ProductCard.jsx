@@ -16,7 +16,7 @@ const ProductCard = ({ data }) => {
       />
       <div className="flex flex-col items-start flex-wrap overflow-hidden gap-y-1">
         <span
-          className="text-base font-medium hover:text-blue-800 cursor-pointer line-clamp-2"
+          className="text-base font-medium hover:text-primary cursor-pointer line-clamp-2"
           title={data.product.title}
           onClick={handleClick}
         >
