@@ -20,9 +20,9 @@ const InformationProduct = ({ data }) => {
           modules={[Navigation, Thumbs, Autoplay]}
           grabCursor={true}
           effect="fade"
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           thumbs={{ swiper: activeThumb }}
-          className="product-images-slider"
+          className="product-images-slider mb-3"
         >
           {data?.images.map((item, index) => (
             <SwiperSlide key={index}>
