@@ -41,7 +41,7 @@ const schema = yup.object({
     .string()
     .required("Vui lòng nhập lại mật khẩu")
     .oneOf([yup.ref("password")], "Xác nhận mật khẩu chưa đúng"),
-  term: yup.boolean().oneOf([true], "Vui lòng chấp nhận điều khoản"),
+  // term: yup.boolean().oneOf([true], "Vui lòng chấp nhận điều khoản"),
 });
 
 const SignUpPage = () => {
@@ -58,7 +58,7 @@ const SignUpPage = () => {
       email: "",
       password: "",
       retypePassword: "",
-      term: false,
+      term: true,
     },
   });
 
@@ -165,7 +165,7 @@ const SignUpPage = () => {
           )}
         </Field>
 
-        <Field>
+        {/* <Field>
           <Checkbox
             control={control}
             text="Tôi đồng ý với các điều khoản"
@@ -176,7 +176,7 @@ const SignUpPage = () => {
               {errors.term?.message}
             </p>
           )}
-        </Field>
+        </Field> */}
 
         <Button
           type="submit"
