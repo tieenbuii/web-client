@@ -310,7 +310,7 @@ const UserOrder = () => {
                                     className="p-2 rounded-lg text-white bg-orange-400"
                                     style={{ whiteSpace: "nowrap" }}
                                   >
-                                    Đang xử lý
+                                    Chờ xác nhận
                                   </span>
                                 </td>
                               )}
