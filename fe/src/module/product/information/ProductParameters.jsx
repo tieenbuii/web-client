@@ -15,7 +15,7 @@ const ProductParameters = ({ data }) => {
             <td>{data?.origin}</td>
           </tr>
           <tr>
-            <td>Năm ra mắt</td>
+            <td>Năm phát hành</td>
             <td>{data?.yearOfLaunch}</td>
           </tr>
           <tr>

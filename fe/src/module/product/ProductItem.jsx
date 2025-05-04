@@ -30,13 +30,13 @@ const ProductItem = ({
           "https://lh3.googleusercontent.com/ZQFbZeosDa1ODQnaaunB72fejXPcl_hg7rfEcgVlZSkgtOTAHQH1M4RxVrH2cLN6gjqJvOAq1b8CeE92gjqDN2W3b2HsMkxb=rw"
         }
         alt=""
-        className="w-full h-[180px] object-cover rounded-lg mb-2 transition-transform group-hover:scale-105"
+        className="w-full h-[180px] object-cover rounded-lg transition-transform group-hover:scale-105 mb-4"
       />
       <div className="flex flex-col flex-1">
-        <h3 className="line-clamp-1 mb-2 text-sm font-medium">
+        <h3 className="line-clamp-1 mb-2 text-lg font-medium">
           {product?.title}
         </h3>
-        {product?.inventory >= 5 && (
+        {/* {product?.inventory >= 5 && (
           <span className="sm:hidden h-2 text-tertiary font-medium mb-2 text-sm"></span>
         )}
         {product?.inventory < 5 && product?.inventory > 0 && (
@@ -49,7 +49,7 @@ const ProductItem = ({
             Sản phẩm hết hàng
           </span>
         )}
-        {product?.inventory >= 5 && <span className="mb-8"></span>}
+        {product?.inventory >= 5 && <span className="mb-8"></span>} */}
         <div className="flex items-center justify-between text-sm  mb-2">
           <span className="text-lg text-primary font-semibold">
             {formatPrice(product?.promotion)}
@@ -57,17 +57,16 @@ const ProductItem = ({
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
+              width="1em"
+              height="1em"
+              {...props}
               className="w-6 h-6 text-primary"
             >
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
-              />
+                fill="currentColor"
+                d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.996.996 0 0 0 20.01 4H5.21l-.94-2H1v2h2l3.6 7.59l-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2s2-.9 2-2s-.9-2-2-2"
+              ></path>
             </svg>
           </span>
         </div>
@@ -107,6 +106,20 @@ const ProductItem = ({
               </>
             )}
           </div>
+          {product?.inventory >= 5 && (
+            <span className="sm:hidden h-2 text-tertiary font-medium mb-2 text-sm"></span>
+          )}
+          {product?.inventory < 5 && product?.inventory > 0 && (
+            <span className="sm:h-auto h-10 text-tertiary font-medium mb-2 text-sm">
+              Chỉ còn {product?.inventory} sản phẩm
+            </span>
+          )}
+          {product?.inventory === 0 && (
+            <span className="text-tertiary font-medium mb-2 text-sm">
+              Sản phẩm hết hàng
+            </span>
+          )}
+          {product?.inventory >= 5 && <span className="mb-8"></span>}
           {/* {selected && selected.includes(product) ? (
             <button
               className="sm:p-2 text-red-600 border border-solid border-red-600 rounded-lg text-sm font-medium transition-all "
