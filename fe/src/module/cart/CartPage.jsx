@@ -154,7 +154,7 @@ const CartPage = () => {
                 </div>
                 {!isLoggedIn ? (
                   <button
-                    className="bg-blue-700 text-white rounded-lg flex flex-col items-center mx-auto py-2 mt-4 w-full"
+                    className="bg-primary text-white rounded-lg flex flex-col items-center mx-auto py-2 mt-4 w-full"
                     type="button"
                     onClick={handleClick}
                   >

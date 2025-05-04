@@ -188,7 +188,7 @@ const ProductList = ({ data, handlePageClick, page, totalPage }) => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="text-base font-semibold">Nhóm nước hoa</td>
+                  <td className="text-base font-semibold">Nhóm hương</td>
                   <td>
                     <span className="text-base font-normal">
                       {selectedItems[0]?.perfumeGroup}
@@ -223,6 +223,19 @@ const ProductList = ({ data, handlePageClick, page, totalPage }) => {
                   <td>
                     <span className="text-base font-normal">
                       {selectedItems[1]?.yearOfLaunch}
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-base font-semibold">Xuất xứ</td>
+                  <td>
+                    <span className="text-base font-normal">
+                      {selectedItems[0]?.origin}
+                    </span>
+                  </td>
+                  <td>
+                    <span className="text-base font-normal">
+                      {selectedItems[1]?.origin}
                     </span>
                   </td>
                 </tr>

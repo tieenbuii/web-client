@@ -19,7 +19,7 @@ const ProductParameters = ({ data }) => {
             <td>{data?.yearOfLaunch}</td>
           </tr>
           <tr>
-            <td>Nhóm nước hoa</td>
+            <td>Nhóm hương</td>
             <td>{data?.perfumeGroup}</td>
           </tr>
           <tr>

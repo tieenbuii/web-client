@@ -184,7 +184,7 @@ const ProductListHome = ({ data, bg = "", className = "" }) => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="text-base font-semibold">Nhóm nước hoa</td>
+                  <td className="text-base font-semibold">Nhóm hương</td>
                   <td>
                     <span className="text-base font-normal">
                       {selectedItems[0]?.perfumeGroup}
