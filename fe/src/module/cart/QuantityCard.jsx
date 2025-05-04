@@ -106,7 +106,7 @@
 // };
 
 // export default QuantityCard;
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { removeFromCart, setQuantity } from "../../redux/cart/cartSlice";
 import Swal from "sweetalert2";
@@ -114,39 +114,37 @@ import Swal from "sweetalert2";
 const QuantityCard = ({ data }) => {
   const dispatch = useDispatch();
 
-  const handleDecreaseQuantity = (id, quantity) => {
-    const newQty = quantity - 1;
+  // Local state để xử lý input
+  const [inputValue, setInputValue] = useState(data.quantity.toString());
+
+  // Nếu redux thay đổi (ví dụ click + hoặc -), đồng bộ lại input
+  useEffect(() => {
+    setInputValue(data.quantity.toString());
+  }, [data.quantity]);
+
+  const handleDecreaseQuantity = () => {
+    const newQty = data.quantity - 1;
     if (newQty < 1) return;
-
-    dispatch(setQuantity({ id, quantity: newQty }));
+    dispatch(setQuantity({ id: data.id, quantity: newQty }));
   };
 
-  const handleIncreaseQuantity = (id, quantity, inventory) => {
-    const newQty = quantity + 1;
-    if (newQty > inventory) return;
-
-    dispatch(setQuantity({ id, quantity: newQty }));
+  const handleIncreaseQuantity = () => {
+    const newQty = data.quantity + 1;
+    if (newQty > data.product.inventory) return;
+    dispatch(setQuantity({ id: data.id, quantity: newQty }));
   };
 
-  const handleInputChange = (e, id, inventory) => {
-    let value = e.target.value;
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value); // chỉ update local state, không dispatch vội
+  };
 
-    // Cho phép xóa tạm thời input mà không crash
-    if (value === "") {
-      dispatch(setQuantity({ id, quantity: 1 }));
-      return;
-    }
+  const handleInputBlur = () => {
+    let value = parseInt(inputValue, 10);
+    if (isNaN(value) || value < 1) value = 1;
+    if (value > data.product.inventory) value = data.product.inventory;
 
-    value = parseInt(value, 10);
-
-    // Kiểm tra giá trị hợp lệ
-    if (isNaN(value) || value < 1) {
-      value = 1;
-    } else if (value > inventory) {
-      value = inventory;
-    }
-
-    dispatch(setQuantity({ id, quantity: value }));
+    dispatch(setQuantity({ id: data.id, quantity: value }));
+    setInputValue(value.toString());
   };
 
   const handleDelete = (id) => {
@@ -171,7 +169,7 @@ const QuantityCard = ({ data }) => {
       <div className="flex items-center">
         <span
           className="inline-block p-2 bg-[#f8f8fc] cursor-pointer"
-          onClick={() => handleDecreaseQuantity(data.id, data.quantity)}
+          onClick={handleDecreaseQuantity}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -187,24 +185,17 @@ const QuantityCard = ({ data }) => {
 
         <input
           type="number"
-          value={data.quantity}
+          value={inputValue}
           min={1}
           max={data.product.inventory}
-          onChange={(e) =>
-            handleInputChange(e, data.id, data.product.inventory)
-          }
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
           className="p-1 bg-[#f8f8fc] w-[50px] text-center count"
         />
 
         <span
           className="inline-block p-2 bg-[#f8f8fc] cursor-pointer"
-          onClick={() =>
-            handleIncreaseQuantity(
-              data.id,
-              data.quantity,
-              data.product.inventory
-            )
-          }
+          onClick={handleIncreaseQuantity}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
