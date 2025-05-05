@@ -274,7 +274,7 @@ const PaymentBank = () => {
 
   return (
     <div className="mt-10">
-      <div className="container mx-auto  bg-white rounded-lg flex flex-col p-12 justify-between">
+      <div className="container mx-auto  bg-white rounded-lg flex flex-col py-5 px-12 justify-between">
         <span className="text-2xl font-semibold mx-auto">
           Thông tin đơn hàng
         </span>
