@@ -81,7 +81,7 @@ const CartPage = () => {
             <div className="flex items-center justify-between mt-2">
               <div className="text-xl font-bold">Giỏ hàng</div>
               <button
-                className="text-sm font-medium border-2 rounded-lg py-2 px-2 border-gray-600"
+                className="hidden text-sm font-medium border-2 rounded-lg py-2 px-2 border-gray-600"
                 onClick={handlePrint}
               >
                 Tải báo giá

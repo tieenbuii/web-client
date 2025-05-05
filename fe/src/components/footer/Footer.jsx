@@ -70,11 +70,6 @@ const Footer = () => {
                   Hotline: 0399311529
                 </Link>
               </li>
-              <li>
-                <Link to={"/"} className="text-base hover:text-primary">
-                  Email: pineperfumenuochoa@gmail.com
-                </Link>
-              </li>
             </ul>
           </div>
           <div>
