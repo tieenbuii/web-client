@@ -257,7 +257,7 @@ const ItemAddress = ({ data, data_key }) => {
             type="button"
             onClick={() => setShowModal(true)}
           >
-            Chỉnh sửa
+            Sửa
           </button>
           <button
             className="border-2 border-solid px-2 py-2 text-red-600 font-medium border-[red] rounded-lg"

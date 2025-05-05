@@ -107,7 +107,7 @@ const FeedbackItem = ({ data }) => {
             <span className="text-base font-medium">Nhận xét:</span>
             <span className="break-all">{data?.review}</span>
           </div>
-          {current?._id === data?.user?._id && (
+          {/* {current?._id === data?.user?._id && (
             <div className="flex items-center justify-end gap-x-4">
               <div
                 className="flex items-center justify-end gap-x-2 cursor-pointer text-black hover:text-primary"
@@ -153,7 +153,7 @@ const FeedbackItem = ({ data }) => {
                 <span className="text-base font-medium">Xóa</span>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
       <ModalAdvanced

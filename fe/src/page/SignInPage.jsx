@@ -85,7 +85,7 @@ const SignInPage = () => {
         return;
       }
       toast.dismiss();
-      toast.success("Chào mừng bạn đến với Pine Perfume", {
+      toast.success("Đăng nhập thành công", {
         pauseOnHover: false,
       });
       reset({
@@ -111,7 +111,7 @@ const SignInPage = () => {
           const resultAction = await dispatch(loginWithGoogle(data));
           unwrapResult(resultAction);
           toast.dismiss();
-          toast.success("Chào mừng bạn đến với Pine Perfume", {
+          toast.success("Đăng nhập thành công", {
             pauseOnHover: false,
           });
           navigate("/");

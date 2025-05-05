@@ -596,7 +596,7 @@ const PaymentPage = () => {
                     className="text-base font-medium text-primary cursor-pointer hover:text-secondary"
                     onClick={() => navigate("/cart")}
                   >
-                    Chỉnh sửa
+                    Sửa
                   </span>
                 </div>
                 {cart?.length > 0 &&

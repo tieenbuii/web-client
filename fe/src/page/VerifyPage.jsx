@@ -47,7 +47,7 @@ const VerifyPage = () => {
       return navigate("/sign-up");
     } else if (JSON.parse(localStorage.getItem("user")).active === "active") {
       toast.dismiss();
-      toast.success("Chào mừng bạn đến với Pine Perfume", {
+      toast.success("Đăng nhập thành công", {
         pauseOnHover: false,
       });
       return navigate("/");
@@ -67,7 +67,7 @@ const VerifyPage = () => {
       const resultAction = await dispatch(action);
       const user = unwrapResult(resultAction);
       toast.dismiss();
-      toast.success("Chào mừng bạn đến với Pine Perfume", {
+      toast.success("Đăng nhập thành công", {
         pauseOnHover: false,
       });
       navigate("/");

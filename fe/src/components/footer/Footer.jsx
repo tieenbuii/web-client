@@ -57,22 +57,22 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to={"/"} className="text-base hover:text-primary">
-                  Giờ hoạt động: 08h - 22h hàng ngày (cả T7 CN)
+                  Hoạt động: 8h - 22h (Thứ 2 - Thứ 7)
                 </Link>
               </li>
               <li>
                 <Link to={"/"} className="text-base hover:text-primary">
-                  TỔNG ĐÀI TƯ VẤN 1 – 028 888 999 42
+                  Địa chỉ: Công viên phần mềm Quang Trung
                 </Link>
               </li>
               <li>
                 <Link to={"/"} className="text-base hover:text-primary">
-                  TỔNG ĐÀI TƯ VẤN 2 – 0877 511 582
+                  Hotline: 0399311529
                 </Link>
               </li>
               <li>
                 <Link to={"/"} className="text-base hover:text-primary">
-                  Email liên hệ: pineperfumenuochoa@gmail.com
+                  Email: pineperfumenuochoa@gmail.com
                 </Link>
               </li>
             </ul>

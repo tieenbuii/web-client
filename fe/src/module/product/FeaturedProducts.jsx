@@ -53,7 +53,7 @@ const FeaturedProducts = ({ data, bg = "", className = "" }) => {
   return (
     <div className={`${className} max-w-[100vw]`}>
       <div className={`container pt-5`}>
-        <h2 className="mb-5 text-3xl uppercase text-red-500 font-bold text-center">
+        <h2 className="mb-5 text-3xl uppercase text-primary font-bold text-center">
           Sản phẩm nổi bật
         </h2>
         <Swiper
@@ -75,7 +75,7 @@ const FeaturedProducts = ({ data, bg = "", className = "" }) => {
           slidesPerView={2}
           slidesPerGroup={2}
           navigation
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           className={`w-full rounded-lg ${className}`}
         >
           {data.length > 0 &&
